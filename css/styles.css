@@ -3,7 +3,7 @@
 :root {
     --color-primary: #2584ff;
     --color-secondary: #00d9ff;
-    --color-accent: #ff3400;
+    --color-accent: #030C64;
     --color-headings: #1b0760;
    /* --color-body: #918ca4;  This will need to be gradient that goes to red at bottom */
     --color-body-darker: #5c5577;
@@ -33,6 +33,9 @@
   body {
     font-family: Inter, Arial, Helvetica, sans-serif;
     color: var(--color-body);
+   /* background: rgb(216,36,36);
+    background: linear-gradient(0deg, rgba(216,36,36,1) 31%, rgba(145,140,164,1) 59%);
+  figure this out later */
     font-size: 2.4rem;
     line-height: 1.5;
   }
@@ -107,3 +110,37 @@
       font-size: 1.5rem;
     }
   }
+
+  /* Icons */
+.icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .icon--small {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .icon--primary {
+    fill: var(--color-primary);
+  }
+  
+  .icon--white {
+    fill: #fff;
+  }
+  
+  .icon-container {
+    background: #f3f9f8;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon-container--accent {
+    background: var(--color-accent);
+  }
+  
