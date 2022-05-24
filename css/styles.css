@@ -5,7 +5,7 @@
     --color-secondary: #00d9ff;
     --color-accent: #030C64;
     --color-headings: #1b0760;
-   /* --color-body: #918ca4;  This will need to be gradient that goes to red at bottom */
+    --color-body: #918ca4;  
     --color-body-darker: #5c5577;
     --color-border: #ccc;
     --border-radius: 30px;
