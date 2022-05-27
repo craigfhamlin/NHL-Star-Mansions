@@ -15,10 +15,20 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
-    <p>Hello World!</p>
-    <svg class="icon nav__toggler">
-      <use xlink:href="images/sprite.svg#airhockey"></use>
-    </svg>
-    <a href="#" class="link-arrow">scores</a>
+    <nav class="nav collapsible">
+      <a class="nav__brand" href="/"
+        ><img src="images/FullLogo-cropped-resized.png" alt=""
+      /></a>
+      <svg class="icon icon--white nav__toggler">
+        <use xlink:href="images/sprite.svg#hockey-puck"></use>
+      </svg>
+      <ul class="list nav__list collapsible__content">
+        <li class="nav__item"><a href="#">Stats</a></li>
+        <li class="nav__item"><a href="#">Odds</a></li>
+        <li class="nav__item"><a href="#">Bets</a></li>
+        <li class="nav__item"><a href="#">Games</a></li>
+      </ul>
+    </nav>
+    <script src="js/main.js"></script>
   </body>
 </html>
