@@ -1,242 +1,28 @@
 @import './normalize.css';
+@import './root.css';
+@import './typography.css';
+@import './links.css';
+@import './list.css';
+@import './icons.css';
+@import './buttons.css';
+@import './inputs.css';
+@import './grid.css';
+@import './collapsibles.css';
+@import './blocks.css';
+@import './nav-bar.css';
+@import './hero.css';
+@import './domain-block.css'
 
-:root {
-    --color-primary: #2584ff;
-    --color-secondary: #00d9ff;
-    --color-accent: #030C64;
-    --color-headings: #1b0760;
-    --color-body: #918ca4;  
-    --color-body-darker: #5c5577;
-    --color-border: #ccc;
-    --border-radius: 30px;
-  }
-  
-  /* universal selector */
-  *,
-  *::after,
-  x::before {
-    box-sizing: border-box; /* makes sure everything fits on screen */
-  }
-  
-  /* Typography */
-  ::selection {
-    /* so when you select text any time it creates a cool color combo */
-    background: var(--color-accent);
-    color: #FFFF00;
-  }
-  
-  html {
-    /* 62.5% of 16px (the default font size) = 10px */
-    font-size: 62.5%;
-  }
-  
-  body {
-    font-family: Inter, Arial, Helvetica, sans-serif;
-    color: var(--color-body);
-   /* background: rgb(216,36,36);
-    background: linear-gradient(0deg, rgba(216,36,36,1) 31%, rgba(145,140,164,1) 59%);
-  figure this out later */
-    font-size: 2.4rem;
-    line-height: 1.5;
-  }
-  
-  h1,
-  h2,
-  h3 {
-    color: var(--color-headings);
-    margin-bottom: 1rem;
-    line-height: 1.1;
-  }
-  
-  h1 {
-    font-size: 7rem;
-  }
-  
-  h2 {
-    font-size: 4rem;
-  }
-  
-  h3 {
-    font-size: 3rem;
-    font-weight: 500;
-  }
-  
-  p {
-    margin-top: 0;
-  }
-  
-  @media screen and (min-width: 1024px) {
-    body {
-      font-size: 1.8rem;
-    }
-  
-    h1 {
-      font-size: 8rem;
-    }
-  
-    h2 {
-      font-size: 4rem;
-    }
-  
-    h3 {
-      font-size: 2.4rem;
-    }
-  }
-  
-  /* Links */
-  a {
-    text-decoration: none;
-  }
-  
-  .link-arrow {
-    color: var(--color-accent);
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  .link-arrow::after {
-    content: "___/";
-    margin-left: 5px;
-    transition: margin 0.15s;
-  }
-  
-  .link-arrow:hover::after {
-    margin-left: 10px;
-  }
-  
-  @media screen and (min-width: 1024px) {
-    .link-arrow {
-      font-size: 1.5rem;
-    }
-  }
 
-  /* Icons */
-.icon {
-    width: 40px;
-    height: 40px;
-  }
   
-  .icon--small {
-    width: 30px;
-    height: 30px;
-  }
   
-  .icon--primary {
-    fill: var(--color-primary);
-  }
-  
-  .icon--white {
-    fill: #fff;
-  }
-  
-  .icon-container {
-    background: #f3f9f8;
-    width: 64px;
-    height: 64px;
-    border-radius: 100%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .icon-container--accent {
-    background: var(--color-accent);
-  }
-
-  /* Lists */
-  .list {
-    list-style: none; /* gets rid of default bullet point */
-    padding-left: 0; /* gets rid of default left padding all browsers apply */
-  }
-
-  /* Collapsibles */
-  .collapsible__content {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.3s;
-  }
-
-  /* might not be needed. Just to turn icon later */
-  .collapsible--expanded .collapsible__chevron {
-    transform: rotate(0);
-  }
-  
-  .collapsible--expanded .collapsible__content {
-    max-height: 100vh;
-    opacity: 1;
-  }
-  
-  /* Nav Bar */
-  .nav {
-    background: #000;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 1rem;
-    align-items: center;
-    filter: brightness(150%);
-  }
-  
-  .nav__list {
-    margin: 0;
-    width: 100%;
-  }
-  
-  .nav__item {
-    padding: 0.5rem 2rem;
-    border-bottom: 1px solid #222;
-  }
-  
-  .nav__item > a {
-    color: #d2d0db;
-    transition: color 0.3s;
-  }
-  
-  .nav__item > a:hover {
-    color: #fff;
-  }
-  
-  .nav__toggler {
-    opacity: 0.5;
-    transition: box-shadow 0.15s;
-    cursor: pointer;
-  }
-  
-  .nav.collapsible--expanded .nav__toggler {
-    opacity: 1;
-    border-radius: 5px;
-  }
-
  
-  
-  .nav__brand {
-    transform: translateY(3px);
-    
-
-  }
-  
-  @media screen and (min-width: 768px) {
-    .nav__toggler {
-      display: none;
-    }
-  
-    .nav__list {
-      width: auto;
-      display: flex;
-      font-size: 1.6rem;
-      /* make the list always visible */
-      max-height: 100%;
-      opacity: 1;
-    }
-  .collapsible__content {
-      display: flex;
-  }
-   
-  }
 
   
+  
+ 
 
   
+  
+
   

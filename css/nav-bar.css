@@ -1,0 +1,75 @@
+/* Nav Bar */
+.nav {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    align-items: center;
+    filter: brightness(150%);
+  }
+  
+  .nav__list {
+    margin: 0;
+    width: 100%;
+  }
+  
+  .nav__item {
+    padding: 0.5rem 2rem;
+    border-bottom: 1px solid #222;
+  }
+
+
+  
+  .nav__item > a {
+    color: #838486;
+    transition: color 0.3s;
+  }
+  
+  .nav__item > a:hover {
+    color: #fff;
+  }
+  
+  .nav__toggler {
+    opacity: 0.5;
+    transition: box-shadow 0.15s;
+    cursor: pointer;
+  }
+  
+  .nav.collapsible--expanded .nav__toggler {
+    opacity: 1;
+    border-radius: 5px;
+  }
+
+ 
+  
+  .nav__brand {
+    transform: translateY(3px);
+  }
+  
+  @media screen and (min-width: 768px) {
+    .nav__toggler {
+      display: none;
+    }
+  
+    .nav__list {
+      width: auto;
+      display: flex;
+      font-size: 1.5rem;
+      /* make the list always visible */
+      max-height: 100%;
+      opacity: 1;
+    }
+
+  .collapsible__content {
+      display: flex;
+  }
+
+  .nav__item {
+    border-bottom: 0;
+  }
+
+  }
+
+
+ 

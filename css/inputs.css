@@ -1,0 +1,37 @@
+/* Inputs */
+.input {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    color: var(--color-headings);
+    font-size: 2rem;
+    outline: 0;
+    padding: 1.5rem 3.5rem;
+  }
+  
+  ::placeholder {
+    color: #cdcbd7;
+  }
+  
+  .input-group {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    display: flex; /* allows input field to stretch */
+    padding: 1.5rem 2rem; /* reduce some of the browser automatic padding */
+  }
+  
+  .input-group .input {
+    border: 0;
+    flex-grow: 1; /* makes input field grow to take up all available space */
+    width: 0; /* chrome auto assigned a width to the input so you need to add this line to fix bug */
+  }
+  
+  .input-group .btn {
+    margin: 4px;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .input {
+      font-size: 1.5rem;
+    }
+  }
+  

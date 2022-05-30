@@ -23,12 +23,58 @@
         <use xlink:href="images/sprite.svg#hockey-puck"></use>
       </svg>
       <ul class="list nav__list collapsible__content">
-        <li class="nav__item"><a href="#">Stats</a></li>
+        <li class="nav__item"><a href="#">About</a></li>
         <li class="nav__item"><a href="#">Odds</a></li>
-        <li class="nav__item"><a href="#">Bets</a></li>
-        <li class="nav__item"><a href="#">Games</a></li>
+        <li class="nav__item"><a href="#">Updates</a></li>
+        <li class="nav__item"><a href="#">Simulations</a></li>
       </ul>
     </nav>
+    <section class="block block--dark block--skewed-left hero">
+      <div class="container grid grid--1x2">
+        <header class="block__header hero__content">
+          <h1 class="block__heading">Bet Like a Pro</h1>
+          <p class="hero__tagline">Increase your odds in under 60 seconds</p>
+          <a href="" class="btn btn--accent btn--stretched">Get started</a>
+        </header>
+        <picture>
+          <source
+            type="image/png"
+            srcset="images/fade.png 1x, images/sid.png 2x" />
+          <img class="hero__image" src="images/sid.png" alt=""
+        /></picture>
+      </div>
+    </section>
+    <section class="block container block-domain">
+      <header class="block__header">
+        <h2>Custom Design Your Betting Line</h2>
+        <p>
+          Search through teams, players and seasons to get an automatic
+          performance analysis reflecting the current numbers
+        </p>
+      </header>
+      <div class="input-group">
+        <input
+          type="text"
+          class="input"
+          placeholder="Enter team name here..."
+        />
+        <button class="btn btn--accent">
+          <svg class="icon icon--white">
+            <use xlink:href="images/sprite.svg#china-structure"></use>
+          </svg>
+          Let's Go!!
+        </button>
+      </div>
+      <ul class="list block-domain__prices">
+        <li><span class="badge badge--secondary">MacDavid</span></li>
+        <li>Foo #15</li>
+        <li>Matthew</li>
+        <li>Crosby</li>
+        <li>Yip #87</li>
+        <li>Gallagher</li>
+      </ul>
+    </section>
+
     <script src="js/main.js"></script>
   </body>
 </html>

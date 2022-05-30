@@ -1,0 +1,26 @@
+/* Domain Block */
+.block-domain .input-group {
+    border: 0;
+    box-shadow: 0 0 30px 20px #e6ebee;
+    margin: 4rem auto;
+    max-width: 670px;
+  }
+  
+  .block-domain__prices {
+    color: var(--color-headings);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 6rem);
+    font-size: 2rem;
+    font-weight: 600;
+    justify-items: center;
+    /* This will keep it from stretching and also center the item */
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .block-domain__prices {
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+  }

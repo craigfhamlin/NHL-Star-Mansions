@@ -1,0 +1,77 @@
+ /* Buttons */
+ .btn {
+    border-radius: 40px;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    padding: 2rem 4vw;
+    outline: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center; /* makes sure the text for all buttons is in centre */
+  }
+  
+  .btn .icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+  }
+  
+  .btn--primary {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  
+  .btn--primary:hover {
+    background: #3a8ffd;
+  }
+  
+  .btn--secondary {
+    background: var(--color-secondary);
+    color: #fff;
+  }
+  
+  .btn--secondary:hover {
+    background: #00c8eb;
+  }
+  
+  .btn--accent {
+    background: var(--color-accent);
+    color: #fff;
+  }
+  
+  .btn--accent:hover {
+    background: #1624a8;
+  }
+  
+  .btn--stretched {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  
+  .btn--block {
+    width: 100%;
+    display: inline-block; /* anchor elements are inline by default so inline block is needed */
+  }
+  
+  .btn--outline {
+    background: #fff;
+    color: var(--color-headings);
+    border: 2px solid var(--color-headings);
+  }
+  
+  .btn--outline:hover {
+    background: var(--color-headings);
+    color: #fff;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .btn {
+      font-size: 1.5rem;
+    }
+  }
+  
+   

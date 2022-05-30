@@ -1,0 +1,65 @@
+/* Typography */
+::selection {
+    /* so when you select text any time it creates a cool color combo */
+    background: var(--color-accent);
+    color: #FFFF00;
+  }
+  
+  html {
+    /* 62.5% of 16px (the default font size) = 10px */
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    color: var(--color-body);
+   /* background: rgb(216,36,36);
+    background: linear-gradient(0deg, rgba(216,36,36,1) 31%, rgba(145,140,164,1) 59%);
+  figure this out later */
+    font-size: 2.4rem;
+    line-height: 1.5;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    color: var(--color-headings);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+  
+  h1 {
+    font-size: 7rem;
+  }
+  
+  h2 {
+    font-size: 4rem;
+  }
+  
+  h3 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  
+  p {
+    margin-top: 0;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    body {
+      font-size: 1.8rem;
+    }
+  
+    h1 {
+      font-size: 8rem;
+    }
+  
+    h2 {
+      font-size: 4rem;
+    }
+  
+    h3 {
+      font-size: 2.4rem;
+    }
+  }
+  
