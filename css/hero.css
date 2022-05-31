@@ -8,6 +8,8 @@
   
   .hero__image {
     width: 100%;
+    opacity: 0.9;
+    border-radius: 10px;
   }
   
   .hero__content > .block__heading {

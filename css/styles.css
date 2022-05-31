@@ -2,16 +2,19 @@
 @import './root.css';
 @import './typography.css';
 @import './links.css';
+@import './badges.css';
 @import './list.css';
 @import './icons.css';
 @import './buttons.css';
 @import './inputs.css';
+@import './cards.css';
+@import './plans.css';
 @import './grid.css';
 @import './collapsibles.css';
 @import './blocks.css';
 @import './nav-bar.css';
 @import './hero.css';
-@import './domain-block.css'
+@import './domain-block.css';
 
 
   

@@ -15,3 +15,11 @@
   x::before {
     box-sizing: border-box; /* makes sure everything fits on screen */
   }
+
+ /* ADD LATER MAYBE
+  body {
+    background: rgb(216,36,36);
+background: linear-gradient(0deg, rgba(216,36,36,1) 17%, rgba(255,255,255,1) 44%);
+  }
+
+  */
