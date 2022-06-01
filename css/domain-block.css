@@ -18,6 +18,8 @@
     max-width: 700px;
     margin: 0 auto;
   }
+
+
   
   @media screen and (min-width: 768px) {
     .block-domain__prices {
@@ -68,9 +70,7 @@
 }
 
 /* Showcase Block */
-.block-showcase__image {
-  justify-self: end;
-}
+
 
 @media screen and (min-width: 768px) {
   .block-showcase__image > img {
@@ -86,3 +86,4 @@
   width: auto;
   max-width: 700px;
 }
+

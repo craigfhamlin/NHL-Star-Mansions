@@ -32,11 +32,18 @@
     <section class="block block--dark block--skewed-left hero">
       <div class="container grid grid--1x2">
         <header class="block__header hero__content">
-          <h1 class="block__heading">Bet Like a Pro</h1>
+          <h1
+            class="block__heading"
+            data-aos="zoom-in-up"
+            data-aos-duration="600"
+            data-aos-delay="0"
+          >
+            Bet Like a Pro
+          </h1>
           <p class="hero__tagline">Increase your odds in under 60 seconds</p>
           <a href="" class="btn btn--accent btn--stretched">Get started</a>
         </header>
-        <picture>
+        <picture data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
           <source
             type="image/jpeg"
             srcset="images/sid@1x.jpeg 1x, images/sid@2x.jpeg 2x" />
@@ -44,7 +51,7 @@
         /></picture>
       </div>
     </section>
-    <section class="block container block-domain">
+    <section class="block container block-domain" data-aos="fade-up">
       <header class="block__header">
         <h2>Custom Design Your Betting Line</h2>
         <p>
@@ -74,7 +81,7 @@
         <li>Gallagher</li>
       </ul>
     </section>
-    <section class="block container block-plans">
+    <section class="block container block-plans" data-aos="fade-up">
       <div class="grid grid--1x3">
         <div class="plan">
           <div class="card card--secondary">
@@ -147,7 +154,7 @@
         </p>
       </header>
       <article class="grid grid--1x2 feature">
-        <div class="feature__content">
+        <div class="feature__content" data-aos="zoom-in">
           <span class="icon-container">
             <svg class="icon icon--primary">
               <use xlink:href="images/sprite.svg#airhockey"></use>
@@ -168,7 +175,7 @@
         /></picture>
       </article>
       <article class="grid grid--1x2 feature">
-        <div class="feature__content">
+        <div class="feature__content" data-aos="fade-up">
           <span class="icon-container">
             <svg class="icon icon--primary">
               <use xlink:href="images/sprite.svg#hockey-puck"></use>
@@ -189,7 +196,7 @@
         /></picture>
       </article>
       <article class="grid grid--1x2 feature">
-        <div class="feature__content">
+        <div class="feature__content" data-aos="fade-up">
           <span class="icon-container">
             <svg class="icon icon--primary">
               <use xlink:href="images/sprite.svg#panda"></use>
@@ -210,7 +217,7 @@
         /></picture>
       </article>
       <article class="grid grid--1x2 feature">
-        <div class="feature__content">
+        <div class="feature__content" data-aos="zoom-in">
           <span class="icon-container">
             <svg class="icon icon--primary">
               <use xlink:href="images/sprite.svg#china-flag"></use>
@@ -237,13 +244,13 @@
         <h2>Explore Real-Time Simulations</h2>
       </header>
       <div class="container grid grid--1x2 feature">
-        <picture class="block-showcase__image">
+        <picture data-aos="fade-right">
           <source
             type="image/jpeg"
             srcset="images/map@1x.jpeg 1x, images/map@2x.jpeg 2x" />
           <img class="feature__image" src="images/map@2x.jpeg" alt=""
         /></picture>
-        <ul class="list">
+        <ul class="list" data-aos="fade-up">
           <li>
             <div class="media">
               <div class="media__image">
@@ -296,16 +303,22 @@
       </div>
     </section>
     <section class="block">
-      <header class="block__header">
+      <header class="block__header" data-aos="fade-up">
         <h2>But Don't Just Take Our Word For It</h2>
         <p>We let our 1.4 billion customers do the talking</p>
       </header>
-      <div class="container">
+      <div
+        class="container"
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1500"
+      >
         <div class="card testimonial">
           <div class="grid grid--1x2">
             <div class="testimonial__image">
               <img src="images/mao@1x.png" alt="A happy, smiling customer" />
             </div>
+
             <blockquote class="quote">
               <p class="quote__text">
                 I never forget a face, but in your case I'll be glad to make an
@@ -424,5 +437,8 @@
 
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
