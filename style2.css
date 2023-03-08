@@ -1,0 +1,250 @@
+:root{
+    --background-color: rgb(5,5,5);
+    --background-color1: rgb(6, 42, 139);
+    --text-color1: rgb(255, 217, 0);
+    --text-color2: rgb(255, 255, 255);
+}
+
+
+body {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+}
+
+  .card {
+    position: relative;
+    height: 300px;
+    width: 200px;
+    border: 15px rgb(255,215,0) solid;
+    margin-left: 41.5vw;
+    text-transform: uppercase; 
+    font-family: 'Roboto', sans-serif;
+    border-radius: 15px;
+}
+    
+    .team_logo {
+      position: absolute;
+      z-index: 15;
+      top: 10px;
+      left: 10px;
+      height: 17px;
+      width: 25px;
+    }
+    
+    .player {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      height: 296px;
+      width: 196px;
+      border: 2px rgb(0, 0, 0) solid;
+    }
+    
+    figcaption {
+      position: absolute;
+      bottom: -10px;
+      right: 0;
+      width: 66%;
+      height: 30px;
+      text-align: center;
+      font-size: 80%;
+      background: rgb(102, 153, 255);
+      border: 2px rgb(0, 0, 0) solid;
+      z-index: 10;
+    }
+
+    .name {
+        color: black;
+    }
+  
+
+.particle {
+    background-color: white;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 30px 5px lightblue,
+    0px 0px 100px 10px lightblue;
+    transition: all 1s, opacity 0s, border-radius 0s;
+    opacity: 0.7;
+    z-index: 3;
+
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 50vh;
+    left: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 45vh;
+    z-index: 4;
+    margin-bottom: 0.25em;
+}
+
+
+.scoreboard {
+    border: 1px solid pink;
+    width: 25px;
+}
+
+#counter {
+    text-align: center;
+}
+
+.scoreboard-container {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top: 60vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 215px;
+    height: 100px;
+}
+
+.text {
+    text-transform: uppercase;
+    color: var(--text-color2);
+}
+
+img {
+    width: 15vw;
+    height: auto;
+}
+
+.rotate {
+    text-align: center;
+    margin-top: 20vh;
+    z-index: 4;
+    margin-bottom: 0.25em;
+    animation: rotation 0.75s 5 linear;
+}
+
+@keyframes rotation{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.expand {
+    position: relative;
+    animation: zoom-in-zoom-out 13s ease 1; 
+}
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(0,0);
+    }
+    20% {
+        transform: scale(5,0.5);
+    }
+    40% {
+        transform: scale(1, 1);
+    }
+    60% {
+        transform: scale(1, 1);
+    }
+    90% {
+        transform: scale(1.5, 1.5);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: var(--background-color1);
+    border: 1.75px solid white;
+    outline: 2.5px solid var(--background-color1);
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5px;
+}
+
+h2 {
+    font-size: 1.75em;
+    margin-top: 0;
+    margin-bottom: 2.5px;
+}
+
+.one {
+    position: relative;
+    width: 5em;
+    height: 2.5em;
+    margin-bottom: 7.5px;
+    background-color: #0c0c0c;
+}
+
+.pts-shadow {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 52.5%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: black;
+}
+
+.pts {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    text-align: end;
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    margin-right: 8.6px;
+    color: var(--text-color1);
+}
+
+@media screen and (max-width:700px){
+    .card {
+        height: 300px;
+        width: 200px;
+        margin-left: 26%;
+    }
+}
+
+@media screen and (max-width:999px) and (min-width:700px){
+    .card {
+        margin-left: 37.5%;
+    }
+    }
+
+@media screen and (max-width:1300px) and (min-width:999px){
+.card {
+    margin-left: 38.5%;
+}
+}
