@@ -14,12 +14,18 @@ body {
     overflow: hidden;
 }
 
+.start {
+    margin-top: 1%;
+    margin-bottom: 0;
+    text-align: center;
+}
+
   .card {
+    display: inline-block;
     position: relative;
     height: 300px;
     width: 200px;
     border: 15px rgb(255,215,0) solid;
-    margin-left: 41.5vw;
     text-transform: uppercase; 
     font-family: 'Roboto', sans-serif;
     border-radius: 15px;
@@ -230,21 +236,15 @@ h2 {
 }
 
 @media screen and (max-width:700px){
+    .rotate{
+        margin-top: 15vh;
+    }
     .card {
         height: 300px;
         width: 200px;
-        margin-left: 26%;
+    }
+    .scoreboard-container {
+        top: 55vh;
     }
 }
 
-@media screen and (max-width:999px) and (min-width:700px){
-    .card {
-        margin-left: 37.5%;
-    }
-    }
-
-@media screen and (max-width:1300px) and (min-width:999px){
-.card {
-    margin-left: 38.5%;
-}
-}
