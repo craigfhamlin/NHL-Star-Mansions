@@ -157,11 +157,11 @@ function outputChoiceFeedBack(hit) {
   }
 }
 function evaluateCardChoice(card) {
+  addClassToElement(card, "flip-it");
   if (card.id == pandaId) {
     updateScore();
     outputChoiceFeedBack(true);
   } else {
-    addClassToElement(card, "flip-it");
     outputChoiceFeedBack(false);
   }
 }
