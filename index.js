@@ -157,7 +157,6 @@ function outputChoiceFeedBack(hit) {
   }
 }
 function evaluateCardChoice(card) {
-  addClassToElement(card, "flip-it");
   if (card.id == pandaId) {
     updateScore();
     outputChoiceFeedBack(true);
