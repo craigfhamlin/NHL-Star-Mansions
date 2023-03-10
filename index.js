@@ -91,7 +91,7 @@ function endRound() {
 function chooseCard(card) {
   if (canChooseCard()) {
     evaluateCardChoice(card);
-    flipCard(card, true);
+    flipCard(card, false);
 
     setTimeout(() => {
       flipCards(false);
@@ -161,6 +161,7 @@ function evaluateCardChoice(card) {
     updateScore();
     outputChoiceFeedBack(true);
   } else {
+    addClassToElement(card, "flip-it");
     outputChoiceFeedBack(false);
   }
 }
