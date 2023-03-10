@@ -91,7 +91,7 @@ function endRound() {
 function chooseCard(card) {
   if (canChooseCard()) {
     evaluateCardChoice(card);
-    flipCard(card, false);
+    flipCard(card, true);
 
     setTimeout(() => {
       flipCards(false);
