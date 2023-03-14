@@ -86,32 +86,6 @@ function chooseCard(card) {
   }
 }
 
-function calculateScoretoAdd(roundNum) {
-  if (roundNum == 1) {
-    return 100;
-  } else if (roundNum == 2) {
-    return 50;
-  } else if (roundNum == 3) {
-    return 25;
-  } else {
-    return 10;
-  }
-}
-
-function calculateScore() {
-  const scoreToAdd = calculateScoretoAdd(roundNum);
-  score = score + scoreToAdd;
-}
-function updateScore() {
-  calculateScore();
-  updateStatusElement(
-    scoreElem,
-    "block",
-    primaryColor,
-    `<span class='badge'>${score}</span>`
-  );
-}
-
 function updateStatusElement(elem, display, color, innerHTML) {
   elem.style.display = display;
 
@@ -136,7 +110,6 @@ function outputChoiceFeedBack(hit) {
 }
 function evaluateCardChoice(card) {
   if (card.id == pandaId) {
-    updateScore();
     outputChoiceFeedBack(true);
   } else {
     outputChoiceFeedBack(false);
