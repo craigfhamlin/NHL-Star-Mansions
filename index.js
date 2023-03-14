@@ -60,31 +60,9 @@ let gameObj = {};
 
 loadGame();
 
-function gameOver() {
-  updateStatusElement(scoreContainerElem, "none");
-  updateStatusElement(roundContainerElem, "none");
-
-  const gameOverMessage = `Game Over! Final Score - <span class='badge'>${score}</span> Click 'Play Game' to play again`;
-
-  updateStatusElement(
-    currentGameStatusElem,
-    "block",
-    primaryColor,
-    gameOverMessage
-  );
-
-  gameInProgress = false;
-  playGameButtonElem.disabled = false;
-}
-
 function endRound() {
   setTimeout(() => {
-    if (roundNum == maxRounds) {
-      gameOver();
-      return;
-    } else {
-      startRound();
-    }
+    startRound();
   }, 3000);
 }
 

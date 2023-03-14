@@ -158,14 +158,11 @@ main {
     left: -8px;
 }
 
-/*.card-inner.flip-it{
+.card-inner.flip-it{
     transform: rotateY(180deg);
-} */
+}
 
 
-.card:hover .card-inner{
-    transform: rotateY(180deg);
-} 
 
 header{
     display: flex;
@@ -355,3 +352,11 @@ header{
         height: 40px;
     }
 }
+
+/* Apply styles only to devices with a pointer or a mouse */
+@media (pointer: fine) {
+    .card:hover .card-inner{
+        transform: rotateY(180deg);
+    } 
+  }
+  
