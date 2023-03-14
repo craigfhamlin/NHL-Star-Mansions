@@ -109,7 +109,8 @@ function outputChoiceFeedBack(hit) {
   }
 }
 function evaluateCardChoice(card) {
-  if (card.id == pandaId) {
+  if (card.id == pandaId || roundNum == 4) {
+    location.replace("page2.html");
     outputChoiceFeedBack(true);
   } else {
     outputChoiceFeedBack(false);
