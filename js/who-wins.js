@@ -97,7 +97,7 @@ function updateStatusElement(elem, display, color, innerHTML) {
 
 function outputChoiceFeedBack(hit) {
   if (hit || roundNum == 4) {
-    location.replace("page2.html");
+    location.replace("win-screen-panda.html");
   } else {
     function getRandomInt(max) {
       return Math.floor(Math.random() * max);
@@ -110,7 +110,7 @@ function outputChoiceFeedBack(hit) {
 }
 function evaluateCardChoice(card) {
   if (card.id == pandaId || roundNum == 4) {
-    location.replace("page2.html");
+    location.replace("win-screen-panda.html");
     outputChoiceFeedBack(true);
   } else {
     outputChoiceFeedBack(false);

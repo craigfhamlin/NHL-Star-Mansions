@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 2500);
           } else if (shotCounter == 5) {
             setTimeout(function () {
-              location.replace("indexZ.html");
+              location.replace("win-screen-z.html");
             }, 2500);
           }
 
