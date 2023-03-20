@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 2500);
           } else if (shotCounter == 5) {
             setTimeout(function () {
-              location.replace("page2.html");
+              location.replace("indexZ.html");
             }, 2500);
           }
 
