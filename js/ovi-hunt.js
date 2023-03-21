@@ -25,12 +25,12 @@ window.addEventListener("mousemove", (event) => {
 
 // event listener to shoot bullets on mouse click
 window.addEventListener("click", (event) => {
-  shootBullet();
+  shootBullet(event.clientX, event.clientY);
 });
 
 // event listener to shoot bullets on touch end
 window.addEventListener("touchend", (event) => {
-  shootBullet();
+  shootBullet(event.touches[0].clientX, event.touches[0].clientY);
 });
 
 // event listener to update user position on touch move
@@ -40,12 +40,12 @@ window.addEventListener("touchmove", (event) => {
   mouseY = event.touches[0].clientY;
 });
 
-function shootBullet() {
-  // create a new bullet at the position of the user
+function shootBullet(x, y) {
+  // create a new bullet at the touch position
   const bullet = document.createElement("div");
   bullet.classList.add("bullet");
-  bullet.style.left = `${userX}px`;
-  bullet.style.top = `${userY}px`;
+  bullet.style.left = `${x}px`;
+  bullet.style.top = `${y}px`;
   bullets.push(bullet);
   document.body.appendChild(bullet);
   // remove the bullet after 1 second
