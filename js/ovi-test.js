@@ -1,3 +1,5 @@
+//OLD WORKING VERSION
+
 window.addEventListener("load", function () {
   document.body.classList.add("loaded");
 });
@@ -25,22 +27,6 @@ window.addEventListener("mousemove", (event) => {
 
 // event listener to shoot bullets on mouse click
 window.addEventListener("click", (event) => {
-  shootBullet();
-});
-
-// event listener to shoot bullets on touch end
-window.addEventListener("touchend", (event) => {
-  shootBullet();
-});
-
-// event listener to update user position on touch move
-window.addEventListener("touchmove", (event) => {
-  event.preventDefault(); // prevent default touch behavior
-  mouseX = event.touches[0].clientX;
-  mouseY = event.touches[0].clientY;
-});
-
-function shootBullet() {
   // create a new bullet at the position of the user
   const bullet = document.createElement("div");
   bullet.classList.add("bullet");
@@ -52,21 +38,22 @@ function shootBullet() {
   setTimeout(() => {
     bullet.remove();
   }, 500);
-}
+});
 
 function stanimate() {
   // update position of user based on cursor position
   const dx = mouseX - userX;
   const dy = mouseY - userY;
-  userX += dx / 10;
-  userY += dy / 10;
-  // move user to new position
-  const user = document.querySelector(".user");
-  user.style.left = `${userX}px`;
-  user.style.top = `${userY}px`;
-  window.requestAnimationFrame(stanimate);
+  const angle = Math.atan2(dy, dx);
+  userX += Math.cos(angle) * 10;
+  userY += Math.sin(angle) * 10;
+  document.querySelector(".user").style.transform = `rotate(${angle}rad)`;
+
+  // request animation frame to update the animation loop
+  requestAnimationFrame(stanimate);
 }
 
+// start the animation loop
 stanimate();
 
 var shotCounter = 0;

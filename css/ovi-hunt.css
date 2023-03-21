@@ -102,19 +102,34 @@ body {
     background-position: center;
   }
 
-  @media screen and (max-width:700px){
-    body{
-      background-size: 150vh;
-    }
-    .container {
-      right: 10%;
-    }
-    #ball{
-      height: 85px;
-      width: 85px;
-    }
-    #shot {
-      width: 100px;
-      height: 100px;
-    }
+
+
+@media only screen and (max-width: 828px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .lou {
+    height: 100vh;
+  }
+
+  #ball {
+    width: 85px;
+    height: 85px;
+  }
+
+  #shot {
+    width: 100px;
+    height: 100px;
+  }
+
+  .container {
+    right: 10%;
+  }
+  
+
+  .user {
+    display: none;
+  }
 }
