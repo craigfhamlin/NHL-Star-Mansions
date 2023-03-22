@@ -203,6 +203,7 @@ window.addEventListener("touchstart", function (event) {
   bomb.style.top = touch.clientY + "px";
   bomb.style.left = touch.clientX + "px";
   document.body.appendChild(bomb);
+  bomb.style.visibility = "visible";
   setTimeout(function () {
     explode(bomb);
     bomb.remove();
