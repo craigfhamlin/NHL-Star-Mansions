@@ -16,6 +16,19 @@ let userY = window.innerHeight / 2;
 
 // variable to store an array of bullets
 const bullets = [];
+window.addEventListener("click", (event) => {
+  // create a new bullet at the position of the user
+  const bullet = document.createElement("div");
+  bullet.classList.add("bullet");
+  bullet.style.left = `${userX}px`;
+  bullet.style.top = `${userY}px`;
+  bullets.push(bullet);
+  document.body.appendChild(bullet);
+  // remove the bullet after 1 second
+  setTimeout(() => {
+    bullet.remove();
+  }, 500);
+});
 
 // event listener to update cursor position on mouse move
 window.addEventListener("mousemove", (event) => {
@@ -23,52 +36,23 @@ window.addEventListener("mousemove", (event) => {
   mouseY = event.clientY;
 });
 
-// event listener to shoot bullets on mouse click
-window.addEventListener("click", (event) => {
-  shootBullet(event.clientX, event.clientY);
-});
-
-// event listener to shoot bullets on touch end
-window.addEventListener("touchend", (event) => {
-  shootBullet(event.touches[0].clientX, event.touches[0].clientY);
-});
-
-// event listener to update user position on touch move
-window.addEventListener("touchmove", (event) => {
-  event.preventDefault(); // prevent default touch behavior
-  mouseX = event.touches[0].clientX;
-  mouseY = event.touches[0].clientY;
-});
-
-function shootBullet(x, y) {
-  // create a new bullet at the touch position
-  const bullet = document.createElement("div");
-  bullet.classList.add("bullet");
-  bullet.style.left = `${x}px`;
-  bullet.style.top = `${y}px`;
-  bullets.push(bullet);
-  document.body.appendChild(bullet);
-  // remove the bullet after 1 second
-  setTimeout(() => {
-    bullet.remove();
-  }, 500);
-}
-
 function stanimate() {
   // update position of user based on cursor position
   const dx = mouseX - userX;
   const dy = mouseY - userY;
-  userX += dx / 10;
-  userY += dy / 10;
-  // move user to new position
-  const user = document.querySelector(".user");
-  user.style.left = `${userX}px`;
-  user.style.top = `${userY}px`;
-  window.requestAnimationFrame(stanimate);
+  const angle = Math.atan2(dy, dx);
+  userX += Math.cos(angle) * 10;
+  userY += Math.sin(angle) * 10;
+  document.querySelector(".user").style.transform = `rotate(${angle}rad)`;
+
+  // request animation frame to update the animation loop
+  requestAnimationFrame(stanimate);
 }
 
+// start the animation loop
 stanimate();
 
+var isShot = false;
 var shotCounter = 0;
 document.addEventListener("DOMContentLoaded", function () {
   var ball = document.getElementById("ball");
@@ -187,4 +171,27 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   ball.addEventListener("click", explode);
+});
+
+function explode(bomb) {
+  var explosion = document.createElement("div");
+  explosion.className = "explosion";
+  explosion.style.top = parseInt(bomb.style.top) - 12.5 + "px";
+  explosion.style.left = parseInt(bomb.style.left) - 12.5 + "px";
+  document.body.appendChild(explosion);
+  setTimeout(function () {
+    explosion.remove();
+  }, 300);
+}
+
+window.addEventListener("click", function (event) {
+  var bomb = document.createElement("div");
+  bomb.className = "bomb";
+  bomb.style.top = event.clientY + "px";
+  bomb.style.left = event.clientX + "px";
+  document.body.appendChild(bomb);
+  setTimeout(function () {
+    explode(bomb);
+    bomb.remove();
+  }, 500);
 });

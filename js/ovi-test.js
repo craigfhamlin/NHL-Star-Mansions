@@ -1,5 +1,3 @@
-//OLD WORKING VERSION
-
 window.addEventListener("load", function () {
   document.body.classList.add("loaded");
 });
@@ -27,33 +25,48 @@ window.addEventListener("mousemove", (event) => {
 
 // event listener to shoot bullets on mouse click
 window.addEventListener("click", (event) => {
-  // create a new bullet at the position of the user
+  shootBullet(event.clientX, event.clientY);
+});
+
+// event listener to shoot bullets on touch end
+window.addEventListener("touchend", (event) => {
+  shootBullet(event.touches[0].clientX, event.touches[0].clientY);
+});
+
+// event listener to update user position on touch move
+window.addEventListener("touchmove", (event) => {
+  event.preventDefault(); // prevent default touch behavior
+  mouseX = event.touches[0].clientX;
+  mouseY = event.touches[0].clientY;
+});
+
+function shootBullet(x, y) {
+  // create a new bullet at the touch position
   const bullet = document.createElement("div");
   bullet.classList.add("bullet");
-  bullet.style.left = `${userX}px`;
-  bullet.style.top = `${userY}px`;
+  bullet.style.left = `${x}px`;
+  bullet.style.top = `${y}px`;
   bullets.push(bullet);
   document.body.appendChild(bullet);
   // remove the bullet after 1 second
   setTimeout(() => {
     bullet.remove();
   }, 500);
-});
+}
 
 function stanimate() {
   // update position of user based on cursor position
   const dx = mouseX - userX;
   const dy = mouseY - userY;
-  const angle = Math.atan2(dy, dx);
-  userX += Math.cos(angle) * 10;
-  userY += Math.sin(angle) * 10;
-  document.querySelector(".user").style.transform = `rotate(${angle}rad)`;
-
-  // request animation frame to update the animation loop
-  requestAnimationFrame(stanimate);
+  userX += dx / 10;
+  userY += dy / 10;
+  // move user to new position
+  const user = document.querySelector(".user");
+  user.style.left = `${userX}px`;
+  user.style.top = `${userY}px`;
+  window.requestAnimationFrame(stanimate);
 }
 
-// start the animation loop
 stanimate();
 
 var shotCounter = 0;
@@ -150,11 +163,12 @@ document.addEventListener("DOMContentLoaded", function () {
           if (shotCounter == 2) {
             setTimeout(function () {
               document.body.style.backgroundImage =
-                "url('images/disneyworld.jpg')";
+                "url('/images/disneyworld.jpg')";
             }, 2500);
           } else if (shotCounter == 4) {
             setTimeout(function () {
-              document.body.style.backgroundImage = "url('images/ukraine.jpg')";
+              document.body.style.backgroundImage =
+                "url('/images/ukraine.jpg')";
               crazyAnimate();
             }, 2500);
           } else if (shotCounter == 5) {

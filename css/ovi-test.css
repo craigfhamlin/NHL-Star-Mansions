@@ -1,0 +1,135 @@
+body {
+    background-image: url("/images/pastoral.webp");
+    background-size: cover;
+    overflow: hidden; /* Prevent scrolling and keep screen size constant */
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+
+  .crosshairs {
+    cursor: url("/images/crosshairs.png"), auto;
+    height: 100vh;
+  }
+
+  body.loaded {
+    opacity: 1;
+  }
+
+  .bullet {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+  }
+
+  .container {
+    top: 3vh;
+    position: relative;
+    width: 275px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    user-select: none;
+  }
+
+  .design {
+    text-shadow: -1px 0px 0px red, 1px 0px 0px red, 0px -1px 0px red,
+      0px 1px 0px red;
+    color: blue;
+  }
+
+  .super {
+    position: absolute;
+    top: 0;
+    left: -11px;
+    right: 0;
+    font-size: 27px;
+    font-family: "New Super Mario Font U", sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  .ovi {
+    font-size: 75px;
+    font-weight: bold;
+    margin: 0 20px;
+    font-family: "New Super Mario Font U", sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: -5px;
+  }
+
+  .sixty-four {
+    font-family: "New Super Mario Font U", sans-serif;
+    font-size: 33px;
+    text-shadow: -1px 0px 0px gold, 1px 0px 0px gold, 0px -1px 0px gold,
+      0px 1px 0px gold;
+    color: red;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 17%;
+    right: 45px;
+    transform: translateY(-45%);
+  }
+
+  #ball {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url("/images/oven.webp");
+    background-size: cover;
+    background-position: center;
+  }
+  #shot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-image: url("/images/ovi-shot.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+
+
+@media only screen and (max-width: 828px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .crosshairs {
+    height: 100vh;
+  }
+
+  #ball {
+    width: 95px;
+    height: 95px;
+  }
+
+  #shot {
+    width: 105px;
+    height: 105px;
+  }
+
+  .container {
+    right: 10%;
+  }
+  
+
+  .user {
+    display: none;
+  }
+}
