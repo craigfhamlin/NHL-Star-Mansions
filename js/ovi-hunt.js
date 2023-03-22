@@ -195,3 +195,16 @@ window.addEventListener("click", function (event) {
     bomb.remove();
   }, 500);
 });
+
+window.addEventListener("touchstart", function (event) {
+  var touch = event.touches[0];
+  var bomb = document.createElement("div");
+  bomb.className = "bomb";
+  bomb.style.top = touch.clientY + "px";
+  bomb.style.left = touch.clientX + "px";
+  document.body.appendChild(bomb);
+  setTimeout(function () {
+    explode(bomb);
+    bomb.remove();
+  }, 500);
+});
