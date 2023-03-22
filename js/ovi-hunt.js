@@ -36,8 +36,12 @@ window.addEventListener("mousemove", (event) => {
   mouseY = event.clientY;
 });
 
-function stanimate() {
-  // update position of user based on cursor position
+/*
+This function updates the position of the user based on the cursor position and 
+sets the rotation angle of the user element accordingly, and then 
+requests an animation frame to update the animation loop. 
+*/
+function updateUserPositionAndAnimationLoop() {
   const dx = mouseX - userX;
   const dy = mouseY - userY;
   const angle = Math.atan2(dy, dx);
@@ -46,11 +50,11 @@ function stanimate() {
   document.querySelector(".user").style.transform = `rotate(${angle}rad)`;
 
   // request animation frame to update the animation loop
-  requestAnimationFrame(stanimate);
+  requestAnimationFrame(updateUserPositionAndAnimationLoop);
 }
 
 // start the animation loop
-stanimate();
+updateUserPositionAndAnimationLoop();
 
 var isShot = false;
 var shotCounter = 0;
