@@ -97,6 +97,11 @@ function updateStatusElement(elem, display, color, innerHTML) {
 
 function outputChoiceFeedBack(hit) {
   if (hit || roundNum == 4) {
+    cards.forEach((card) => {
+      card.imagePath = "/images/panda.jpg";
+      card.id == 4;
+      console.log("right here");
+    });
     location.replace("win-screen-panda.html");
   } else {
     function getRandomInt(max) {
