@@ -2,7 +2,15 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Northern Lights Animation</title>
+    <title>Simulations</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Quicksand&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
     <style>
       html,
       body {
@@ -11,6 +19,23 @@
         overflow: hidden;
         background-color: black;
       }
+      h3 {
+        font-family: "rancho";
+        color: green;
+        margin-bottom: 2.5%;
+        font-size: 3rem;
+        margin-left: 1%;
+      }
+      #about_button {
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 1%;
+        background-color: green;
+      }
+      .about_nav_brand {
+        white-space: nowrap;
+        transform: translateY(-10px);
+      }
 
       canvas {
         display: block;
@@ -18,7 +43,25 @@
     </style>
   </head>
   <body>
+    <nav class="nav collapsible">
+      <a href="index.html" class="about_nav_brand">
+        <h3>NHL Star Mansions</h3>
+      </a>
+      <svg class="icon icon--white nav__toggler">
+        <use xlink:href="images/sprite.svg#hockey-puck"></use>
+      </svg>
+      <ul class="list nav__list collapsible__content">
+        <li class="about_nav_item">
+          <a href="about.html">About</a>
+        </li>
+        <li class="about_nav_item"><a href="#">Odds</a></li>
+        <li class="about_nav_item"><a href="who-wins.html">Who is #1?</a></li>
+        <li class="about_nav_item"><a href="ovi-hunt.html">Ovi Hunt 64</a></li>
+      </ul>
+      <button id="about_button">bet now</button>
+    </nav>
     <canvas id="canvas"></canvas>
+    <script src="js/main.js"></script>
     <script>
       window.onload = function () {
         var canvas = document.getElementById("canvas");
