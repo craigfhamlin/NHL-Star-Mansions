@@ -1,0 +1,49 @@
+#image {
+    transform: scale(0.75);
+    border: 2px solid pink;
+  }
+  h3 {
+    font-family: "rancho";
+    color: green;
+    margin-bottom: 2.5%;
+    font-size: 3rem;
+    margin-left: 1%;
+  }
+  #about_button {
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 1%;
+    background-color: green;
+    color: black;
+  }
+
+  .about_footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .particles {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+  }
+  .about_nav_brand {
+    white-space: nowrap;
+    transform: translateY(-10px);
+  }
+  canvas {
+    display: block;
+  }
+  #canvas {
+    margin-left: 10%;
+  }
+  .simulations_footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
