@@ -54,19 +54,21 @@
   </head>
   <body>
     <nav class="nav collapsible">
-      <a class="nav__brand" href="/"
-        ><img src="images/FullLogo-cropped-resized.png" alt=""
-      /></a>
+      <a href="index.html" class="about_nav_brand">
+        <h3>NHL Star Mansions</h3>
+      </a>
       <svg class="icon icon--white nav__toggler">
         <use xlink:href="images/sprite.svg#hockey-puck"></use>
       </svg>
       <ul class="list nav__list collapsible__content">
-        <li class="nav__item"><a href="about.html">About</a></li>
-        <li class="nav__item"><a href="#">Odds</a></li>
-        <li class="nav__item"><a href="simulations.html">Simulations</a></li>
-        <li class="nav__item"><a href="who-wins.html">Who is #1?</a></li>
-        <li class="nav__item"><a href="ovi-hunt.html">Ovi Hunt 64</a></li>
+        <li class="about_nav_item">
+          <a href="about.html">About</a>
+        </li>
+        <li class="about_nav_item"><a href="#">Odds</a></li>
+        <li class="about_nav_item"><a href="who-wins.html">Who is #1?</a></li>
+        <li class="about_nav_item"><a href="ovi-hunt.html">Ovi Hunt 64</a></li>
       </ul>
+      <button id="about_button">bet now</button>
     </nav>
     <div class="particles">
       <canvas id="canvas"></canvas>
