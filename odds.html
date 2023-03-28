@@ -6,251 +6,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odds</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Quicksand&family=Rancho&display=swap" rel="stylesheet">
- <style>
-   
-  #canvas{
-      margin-left: 10%;
-  }
-  #image{
-    transform: scale(0.75);
-    border: 2px solid pink;
-  }
-  h3 {
-      font-family: "rancho";
-      color: white;
-      margin-bottom: 2.5%;
-      font-size: 3rem;
-      margin-left: 1%;
-  }
-  #about_button {
-      border-radius: 5px;
-      cursor: pointer;
-      margin-right: 1%;
-  }
-  .about_header {
-      margin-top: 5%;
-      padding-left: 8rem;
-  }
-  .round_corners {
-      border-radius: 8px;
-      border: 8px solid green;
-  }
-  #about_first_row {
-      padding-bottom: 0;
-  }
-  #how_we_do {
-    text-align: right;
-    font-size: 4.25em;
-   margin-top: 0;
-   color: white;
-   margin-bottom: 11rem;
-    padding-left: 3rem;
-    background-color: green;
-    border-left: 5rem solid black;
-  }
-  #fudge {
-      grid-template-columns: 85fr 15fr;
-  }
-  #how_text {
-    margin-bottom: 11rem;
-   padding-left: 2rem;
-   padding-top: 1rem;
-   background-color: green;
-   border-radius: 0px 5px 5px 0px;
-  }
-  #core_values {
-      margin-top: 0;
-      color: white;
-      text-align: right;
-  }
-  #core_header {
-      margin-left: 10rem;
-      margin-bottom: 10rem;
-      padding-right: 2rem;
-      background-color:  hwb(53 39% 0%);
-      border-right: 3rem solid black;
-      border-radius: 5px 5px;
-     
-  }
-  #fudge_div {
-      grid-template-columns: 20fr 85fr;
-      margin-bottom: 5rem;
-  }
-  #core_text {
-    text-align: right;
-  }
-  .about_footer {     
-background-color:black;
-color: #fff;
-padding: 20px;
-text-align: center;
-font-size: 1.5rem;
-  }
-  .about_nav_brand {
-    white-space: nowrap;
-    transform: translateY(-10px);
-  }
-  @media screen and (max-width: 768px) {
-    #about_button { 
-      width: 100rem;
-      height:4rem;
-      background: black;
-      color: #fff;
-  }
-  .about_header {
-      margin-top: 0%;
-      padding-left: 0rem;
-      padding-right: 2rem;
-      margin-bottom: 0%;
-      width: 33rem;
-  }
-  .hero__tagline2 {
-    font-size: 1.1rem;
-    color: #b9c3cf;   
-  }
-  #canvas {
-      margin-top: 0%;
-   margin-left: -4rem;
-    
- 
-  }
-  
-  #fudge {
-      grid-template-columns: 0;
-  }
-  #fudge_div {
-  grid-template-columns: 10fr 90fr;
-  width: 35rem;
-  margin-left: 1rem;  
-  height: 80%;
-  }
-  #how_we_do {
-    text-align: center;
-    font-size: 1.75em;
-   line-height: 5rem;
-    padding-top: 3rem;
-   color: white;
-   margin-bottom: none;
-    padding-left: 0.5rem;
-    background-color: green;
-    display: flex;
-    border-left: 3px solid black;
-  }
-  #how_text {
-    margin-bottom: none;
-   padding-left: none;
-   padding-top: none;
-   padding-bottom: 1rem;
-   background-color: green;
-   border-radius: 0px 5px 5px 0px;
-   width: 90%;
-  }
-  #core_values {
-      margin-top: 0;
-      color: white;
-      text-align: center;
-  }
-  #core_header {
-      margin-left: 5rem;
-      margin-top: -8rem;
-      padding-right: none;
-      background-color:  hwb(53 39% 0%);
-      border-radius: 5px 5px; 
-      width: 25rem;
-      border: 1px solid green;
-     
-  }
-  }
- </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Quicksand&family=Rancho&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #canvas {
+        margin-left: 10%;
+      }
+      #image {
+        transform: scale(0.75);
+        border: 2px solid pink;
+      }
+      h3 {
+        font-family: "rancho";
+        color: white;
+        margin-bottom: 2.5%;
+        font-size: 3rem;
+        margin-left: 1%;
+      }
+      #about_button {
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 1%;
+      }
+      .about_header {
+        margin-top: 5%;
+        padding-left: 8rem;
+      }
+      .round_corners {
+        border-radius: 8px;
+        border: 8px solid green;
+      }
+      #about_first_row {
+        padding-bottom: 0;
+      }
+      #how_we_do {
+        text-align: right;
+        font-size: 4.25em;
+        margin-top: 0;
+        color: white;
+        margin-bottom: 11rem;
+        padding-left: 3rem;
+        background-color: green;
+        border-left: 5rem solid black;
+      }
+      #fudge {
+        grid-template-columns: 85fr 15fr;
+      }
+      #how_text {
+        margin-bottom: 11rem;
+        padding-left: 2rem;
+        padding-top: 1rem;
+        background-color: green;
+        border-radius: 0px 5px 5px 0px;
+      }
+      #core_values {
+        margin-top: 0;
+        color: white;
+        text-align: right;
+      }
+      #core_header {
+        margin-left: 10rem;
+        margin-bottom: 10rem;
+        padding-right: 2rem;
+        background-color: hwb(53 39% 0%);
+        border-right: 3rem solid black;
+        border-radius: 5px 5px;
+      }
+      #fudge_div {
+        grid-template-columns: 20fr 85fr;
+        margin-bottom: 5rem;
+      }
+      #core_text {
+        text-align: right;
+      }
+      .about_footer {
+        background-color: black;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      .about_nav_brand {
+        white-space: nowrap;
+        transform: translateY(-10px);
+      }
+      @media screen and (max-width: 768px) {
+        #about_button {
+          width: 100rem;
+          height: 4rem;
+          background: black;
+          color: #fff;
+        }
+        .about_header {
+          margin-top: 0%;
+          padding-left: 0rem;
+          padding-right: 2rem;
+          margin-bottom: 0%;
+          width: 33rem;
+        }
+        .hero__tagline2 {
+          font-size: 1.1rem;
+          color: #b9c3cf;
+        }
+        #canvas {
+          margin-top: 0%;
+          margin-left: -4rem;
+        }
+
+        #fudge {
+          grid-template-columns: 0;
+        }
+        #fudge_div {
+          grid-template-columns: 10fr 90fr;
+          width: 35rem;
+          margin-left: 1rem;
+          height: 80%;
+        }
+        #how_we_do {
+          text-align: center;
+          font-size: 1.75em;
+          line-height: 5rem;
+          padding-top: 3rem;
+          color: white;
+          margin-bottom: none;
+          padding-left: 0.5rem;
+          background-color: green;
+          display: flex;
+          border-left: 3px solid black;
+        }
+        #how_text {
+          margin-bottom: none;
+          padding-left: none;
+          padding-top: none;
+          padding-bottom: 1rem;
+          background-color: green;
+          border-radius: 0px 5px 5px 0px;
+          width: 90%;
+        }
+        #core_values {
+          margin-top: 0;
+          color: white;
+          text-align: center;
+        }
+        #core_header {
+          margin-left: 5rem;
+          margin-top: -8rem;
+          padding-right: none;
+          background-color: hwb(53 39% 0%);
+          border-radius: 5px 5px;
+          width: 25rem;
+          border: 1px solid green;
+        }
+      }
+    </style>
   </head>
   <body>
-   <div class="round_corners">
-    <nav class="nav collapsible" >
+    <div class="round_corners">
+      <nav class="nav collapsible">
         <a href="index.html" class="about_nav_brand">
-            <h3>NHL Star Mansions</h3>
-        </a>  
+          <h3>NHL Star Mansions</h3>
+        </a>
         <svg class="icon icon--white nav__toggler">
           <use xlink:href="images/sprite.svg#hockey-puck"></use>
         </svg>
         <ul class="list nav__list collapsible__content">
           <li class="about_nav_item"><a href="#">Odds</a></li>
-          <li class="about_nav_item"><a href="simulations.html">Simulations</a></li>
+          <li class="about_nav_item">
+            <a href="simulations.html">Simulations</a>
+          </li>
           <li class="about_nav_item"><a href="who-wins.html">Who is #1?</a></li>
-          <li class="about_nav_item"><a href="ovi-hunt.html">Ovi Hunt 64</a></li>
+          <li class="about_nav_item">
+            <a href="ovi-hunt.html">Ovi Hunt 64</a>
+          </li>
         </ul>
-        <button id="about_button" >bet now</button>
+        <button id="about_button">bet now</button>
       </nav>
-      <section class="block block--dark block--skewed-left hero" id="about_first_row">
-        <div class="container grid grid--1x2">
-          <header class="block__header hero__content about_header">
-            <h2
-              class="block__heading"
-              data-aos="zoom-in-up"
-              data-aos-duration="600"
-              data-aos-delay="0"
-            >
-              ABOUT US
-            </h2>
-            <p class="hero__tagline2">
-              Welcome to our website, fellow citizens! We are the premier
-              destination for hockey gambling in all of our great nation. Our goal
-              is to provide you with the best possible hockey gambling experience,
-              while also promoting the values of our respective consultative
-              democracies. We believe that hockey gambling is not just a way to
-              make money, but a way to spread the message of our democratic
-              ideals. By placing your bets with us, you are supporting the
-              collective spirit of our people and contributing to the advancement
-              of the nation.
-            </p>
-          </header>
-          <picture data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
-              <canvas id="canvas" width="400" height="350"></canvas>
-              <img id="image" src="images/logo-cropped.png" style="display: none" />
-        </div>
-      </section>
 
-      <section class="block--dark hero">
-        <div class="grid grid--1x2" id="fudge">
-            <div class=" grid grid--1x2" id="fudge_div">   
-            <h2
-              data-aos="zoom-in-up"
-              data-aos-duration="600"
-              data-aos-delay="0"
-              id="how_we_do"
-            >
-            HOW<br> WE<br> DO
-            </h2>
-          <p class="hero__tagline2" id="how_text">
-            At our website, we offer a wide variety of hockey betting options, including point spreads, moneylines, and over/unders. We also have a team of expert handicappers who analyze every game to give you the best possible advice on where to place your bets and manage your actions.
-But our website is not just about hockey gambling. It is about promoting the values of socialism and the superiority of our way of life. We believe that through hockey gambling, we can inspire our citizens to work together for the greater good, and to reject the false promises of capitalism and individualism.
-So join us today, fellow citizens, and place your bets on the future of our great nation. Together, we will build a world where everyone has a voice, and where hockey gambling is not just a way to make money, but a way to advance the cause of socialism and democracy.
-          </p>
-          </div>
-          <header class="hero__content" id="core_header">
-            <h2
-              data-aos="zoom-in-up"
-              data-aos-duration="600"
-              data-aos-delay="0"
-              id="core_values"
-            >
-             CORE VALUES
-            </h2>
-            <p class="hero__tagline2" id="core_text">
-                "prosperity", "democracy", "civility" and "harmony"; the social values of "freedom", "equality", "justice" and the "rule of law"; and the individual values of "patriotism", "dedication", "integrity" and "friendship".
-            </p>
-          </header>
-        </div>
-      </section>
       <footer class="about_footer">
         <img src="images/FullLogo-cropped-resized.png" alt="" />
         <p>&copy; 2023 NHLStarMansions. All rights reserved.</p>
       </footer>
-   </div>
-   <script src="js/main.js"></script>
-   <script src="js/about.js"></script>
-    
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
   </body>
 </html>
