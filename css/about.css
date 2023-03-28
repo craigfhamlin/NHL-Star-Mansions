@@ -95,6 +95,11 @@ font-size: 1.5rem;
       padding-left: 0rem;
       padding-right: 2rem;
       margin-bottom: 0%;
+      width: 33rem;
+  }
+  .hero__tagline2 {
+    font-size: 1.1rem;
+    color: #b9c3cf;   
   }
   #canvas {
       margin-top: 0%;
@@ -106,7 +111,7 @@ font-size: 1.5rem;
   }
   #fudge_div {
   grid-template-columns: 10fr 90fr;
-  width: 40rem;
+  width: 35rem;
   margin-left: 1rem;  
   height: 80%;
   }
@@ -117,7 +122,7 @@ font-size: 1.5rem;
     padding-top: 3rem;
    color: white;
    margin-bottom: none;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
     background-color: green;
     display: flex;
     border-left: 3px solid black;
@@ -136,12 +141,12 @@ font-size: 1.5rem;
       text-align: center;
   }
   #core_header {
-      margin-left: 7rem;
+      margin-left: 5rem;
       margin-top: -8rem;
       padding-right: none;
       background-color:  hwb(53 39% 0%);
       border-radius: 5px 5px; 
-      width: 30rem;
+      width: 25rem;
       border: 1px solid green;
      
   }
