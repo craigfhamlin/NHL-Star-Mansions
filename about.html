@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Quicksand&family=Rancho&display=swap" rel="stylesheet">
+    <style>
+      body {
+        border: 25px solid hwb(53 39% 0%);
+      }
+      #canvas{
+          margin-left: 20%;
+      }
+      #image{
+        transform: scale(0.75);
+        border: 2px solid pink;
+      }
+      h3 {
+          font-family: "rancho";
+          color: white;
+          margin-bottom: 2.5%;
+          font-size: 3rem;
+          margin-left: 1%;
+      }
+      #about_button {
+          border-radius: 5px;
+          cursor: pointer;
+          margin-right: 1%;
+      }
+      .about_header {
+          margin-top: 5%;
+          padding-left: 8rem;
+      }
+      .round_corners {
+          border-radius: 8px;
+          border: 8px solid green;
+      }
+      #about_first_row {
+          padding-bottom: 0;
+      }
+      #how_we_do {
+        text-align: right;
+        font-size: 4.25em;
+       margin-top: 0;
+       color: white;
+       margin-bottom: 10rem;
+        padding-left: 3rem;
+        background-color: green;
+        border-left: 5rem solid black;
+      }
+      #fudge {
+          grid-template-columns: 85fr 15fr;
+      }
+      #how_text {
+        margin-bottom: 10rem;
+       padding-left: 2rem;
+       background-color: green;
+       border-radius: 0px 5px 5px 0px;
+      }
+      #core_values {
+          margin-top: 0;
+          color: white;
+          text-align: right;
+      }
+      #core_header {
+          margin-left: 10rem;
+          margin-bottom: 10rem;
+          padding-right: 2rem;
+          background-color:  hwb(53 39% 0%);
+          border-right: 3rem solid black;
+          border-radius: 5px 5px;
+         
+      }
+      #fudge_div {
+          grid-template-columns: 20fr 85fr;
+          margin-bottom: 5rem;
+      }
+      #core_text {
+        text-align: right;
+      }
+      .about_footer {     
+    background-color:black;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+      }
+    
+    </style>
+  </head>
+  <body>
+   <div class="round_corners">
+    <nav class="nav collapsible" >
+        <h3>NHL Star Mansions
+        </h3>
+        <svg class="icon icon--white nav__toggler">
+          <use xlink:href="images/sprite.svg#hockey-puck"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="about_nav_item"><a href="#">Odds</a></li>
+          <li class="about_nav_item"><a href="simulations.html">Simulations</a></li>
+          <li class="about_nav_item"><a href="who-wins.html">Who is #1?</a></li>
+          <li class="about_nav_item"><a href="ovi-hunt.html">Ovi Hunt 64</a></li>
+        </ul>
+        <button id="about_button" >bet now</button>
+      </nav>
+      <section class="block block--dark block--skewed-left hero" id="about_first_row">
+        <div class="container grid grid--1x2">
+          <header class="block__header hero__content about_header">
+            <h2
+              class="block__heading"
+              data-aos="zoom-in-up"
+              data-aos-duration="600"
+              data-aos-delay="0"
+            >
+              ABOUT US
+            </h2>
+            <p class="hero__tagline2">
+              Welcome to our website, fellow citizens! We are the premier
+              destination for hockey gambling in all of our great nation. Our goal
+              is to provide you with the best possible hockey gambling experience,
+              while also promoting the values of our respective consultative
+              democracies. We believe that hockey gambling is not just a way to
+              make money, but a way to spread the message of our democratic
+              ideals. By placing your bets with us, you are supporting the
+              collective spirit of our people and contributing to the advancement
+              of the nation.
+            </p>
+          </header>
+          <picture data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
+              <canvas id="canvas" width="400" height="350"></canvas>
+              <img id="image" src="images/logo-cropped.png" style="display: none" />
+        </div>
+      </section>
+
+      <section class="block--dark hero">
+        <div class="grid grid--1x2" id="fudge">
+            <div class=" grid grid--1x2" id="fudge_div">   
+            <h2
+              data-aos="zoom-in-up"
+              data-aos-duration="600"
+              data-aos-delay="0"
+              id="how_we_do"
+            >
+            HOW<br> WE<br> DO
+            </h2>
+          <p class="hero__tagline2" id="how_text">
+            At our website, we offer a wide variety of hockey betting options, including point spreads, moneylines, and over/unders. We also have a team of expert handicappers who analyze every game to give you the best possible advice on where to place your bets and manage your actions.
+But our website is not just about hockey gambling. It is about promoting the values of socialism and the superiority of our way of life. We believe that through hockey gambling, we can inspire our citizens to work together for the greater good, and to reject the false promises of capitalism and individualism.
+So join us today, fellow citizens, and place your bets on the future of our great nation. Together, we will build a world where everyone has a voice, and where hockey gambling is not just a way to make money, but a way to advance the cause of socialism and democracy.
+          </p>
+          </div>
+          <header class="hero__content" id="core_header">
+            <h2
+              data-aos="zoom-in-up"
+              data-aos-duration="600"
+              data-aos-delay="0"
+              id="core_values"
+            >
+             CORE VALUES
+            </h2>
+            <p class="hero__tagline2" id="core_text">
+                "prosperity", "democracy", "civility" and "harmony"; the social values of "freedom", "equality", "justice" and the "rule of law"; and the individual values of "patriotism", "dedication", "integrity" and "friendship".
+            </p>
+          </header>
+        </div>
+      </section>
+      <footer class="about_footer">
+        <p>&copy; 2023 NHLStarMansions. All rights reserved.</p>
+      </footer>
+   </div>
+    <script>
+     // Get the canvas and image elements
+     const canvas = document.getElementById('canvas');
+      const image = document.getElementById('image');
+      
+      // Get the context and center point of the canvas
+      const ctx = canvas.getContext('2d');
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      
+      // Set the rotation speed and initial angle
+      const speed = 0.05;
+      let angle = 0;
+      
+      // Draw the rotating triangle with the image inside it
+      function draw() {
+        // Clear the canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Save the current context state
+        ctx.save();
+        
+        // Rotate the context around the center point
+        ctx.translate(centerX, centerY);
+        ctx.rotate(angle);
+        
+        // Draw the larger triangle with a yellow border
+        const triangleSize = 100;
+        ctx.beginPath();
+        ctx.moveTo(-triangleSize, -triangleSize);
+        ctx.lineTo(triangleSize, -triangleSize);
+        ctx.lineTo(0, triangleSize);
+        ctx.closePath();
+        ctx.strokeStyle = 'hwb(53 39% 0%)';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        
+        // Scale and draw the larger image inside the triangle
+        const imageSize = Math.sqrt(2) * triangleSize * 0.8; // Calculate the maximum size of the image that fits inside the triangle, scaled up by 30%
+        const yAdjustment = imageSize * 0.15 / 2; // Calculate the adjustment value
+        ctx.beginPath();
+        ctx.moveTo(-triangleSize, -triangleSize);
+        ctx.lineTo(triangleSize, -triangleSize);
+        ctx.lineTo(0, triangleSize);
+        ctx.closePath();
+        ctx.clip();
+        ctx.drawImage(image, -imageSize / 2, -imageSize * 0.675, imageSize, imageSize);
+
+        
+        // Restore the context state
+        ctx.restore();
+        
+        // Update the angle for the next frame
+        angle += speed;
+        
+        // Request the next frame
+        requestAnimationFrame(draw);
+      }
+
+      
+      // Start the animation
+      draw();
+    </script>
+    
+  </body>
+</html>

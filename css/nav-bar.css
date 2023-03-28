@@ -8,7 +8,7 @@
     align-items: center;
     filter: brightness(150%);
   }
-  
+
   .nav__list {
     margin: 0;
     width: 100%;
@@ -17,6 +17,12 @@
   .nav__item {
     padding: 0.5rem 2rem;
     border-bottom: 1px solid #222;
+  }
+
+  .about_nav_item {
+    padding: 0.5rem 2rem;
+    font-size: 1.40rem;
+
   }
 
 
@@ -29,6 +35,16 @@
   .nav__item > a:hover {
     color: #fff;
   }
+
+  .about_nav_item > a {
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .about_nav_item > a:hover {
+    color: yellow;
+  }
+
   
   .nav__toggler {
     opacity: 0.5;

@@ -5,6 +5,12 @@
     color: #b9c3cf;
     margin: 2rem 0 5rem;
   }
+
+  .hero__tagline2 {
+    font-size: 1.3rem;
+    color: #b9c3cf;
+   
+  }
   
   .hero__image {
     width: 100%;
