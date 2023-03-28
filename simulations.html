@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <title>Simulations</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,8 +11,10 @@
       rel="stylesheet"
     />
     <style>
-      html,
       body {
+        background-color: black;
+      }
+      .particles {
         height: 100%;
         margin: 0;
         overflow: hidden;
@@ -40,6 +41,13 @@
       canvas {
         display: block;
       }
+      .simulations_footer {
+        background-color: black;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.5rem;
+      }
     </style>
   </head>
   <body>
@@ -60,7 +68,13 @@
       </ul>
       <button id="about_button">bet now</button>
     </nav>
-    <canvas id="canvas"></canvas>
+    <div class="particles">
+      <canvas id="canvas"></canvas>
+    </div>
+    <footer class="simulations_footer">
+      <img src="images/FullLogo-cropped-resized.png" alt="" />
+      <p>&copy; 2023 NHLStarMansions. All rights reserved.</p>
+    </footer>
     <script src="js/main.js"></script>
     <script>
       window.onload = function () {
