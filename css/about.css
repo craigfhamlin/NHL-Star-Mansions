@@ -103,7 +103,9 @@ font-size: 1.5rem;
   }
   #canvas {
       margin-top: 0%;
-    margin-left: 0%;
+   margin-left: -3rem;
+    
+ 
   }
   
   #fudge {
@@ -134,6 +136,7 @@ font-size: 1.5rem;
    padding-bottom: 1rem;
    background-color: green;
    border-radius: 0px 5px 5px 0px;
+   width: 85%;
   }
   #core_values {
       margin-top: 0;
