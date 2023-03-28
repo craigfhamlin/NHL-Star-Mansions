@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Simulations</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odds</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,14 +13,9 @@
       rel="stylesheet"
     />
     <style>
-      body {
-        background-color: black;
-      }
-      .particles {
-        height: 100%;
-        margin: 0;
-        overflow: hidden;
-        background-color: black;
+      #image {
+        transform: scale(0.75);
+        border: 2px solid pink;
       }
       h3 {
         font-family: "rancho";
@@ -32,14 +29,31 @@
         cursor: pointer;
         margin-right: 1%;
         background-color: green;
+        color: black;
+      }
+
+      .about_footer {
+        background-color: black;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      .particles {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        background-color: black;
       }
       .about_nav_brand {
         white-space: nowrap;
         transform: translateY(-10px);
       }
-
       canvas {
         display: block;
+      }
+      #canvas {
+        margin-left: 10%;
       }
       .simulations_footer {
         background-color: black;
@@ -48,35 +62,37 @@
         text-align: center;
         font-size: 1.5rem;
       }
-      @media screen and (max-width: 768px) {
-      }
     </style>
   </head>
   <body>
-    <nav class="nav collapsible">
-      <a href="index.html" class="about_nav_brand">
-        <h3>NHL Star Mansions</h3>
-      </a>
-      <svg class="icon icon--white nav__toggler">
-        <use xlink:href="images/sprite.svg#hockey-puck"></use>
-      </svg>
-      <ul class="list nav__list collapsible__content">
-        <li class="about_nav_item">
-          <a href="about.html">About</a>
-        </li>
-        <li class="about_nav_item"><a href="#">Odds</a></li>
-        <li class="about_nav_item"><a href="who-wins.html">Who is #1?</a></li>
-        <li class="about_nav_item"><a href="ovi-hunt.html">Ovi Hunt 64</a></li>
-      </ul>
-      <button id="about_button">bet now</button>
-    </nav>
-    <div class="particles">
-      <canvas id="canvas"></canvas>
+    <div class="round_corners">
+      <nav class="nav collapsible">
+        <a href="index.html" class="about_nav_brand">
+          <h3>NHL Star Mansions</h3>
+        </a>
+        <svg class="icon icon--white nav__toggler">
+          <use xlink:href="images/sprite.svg#hockey-puck"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="about_nav_item"><a href="#">Odds</a></li>
+          <li class="about_nav_item">
+            <a href="simulations.html">Simulations</a>
+          </li>
+          <li class="about_nav_item"><a href="who-wins.html">Who is #1?</a></li>
+          <li class="about_nav_item">
+            <a href="ovi-hunt.html">Ovi Hunt 64</a>
+          </li>
+        </ul>
+        <button id="about_button">bet now</button>
+      </nav>
+      <div class="particles">
+        <canvas id="canvas"></canvas>
+      </div>
+      <footer class="about_footer">
+        <img src="images/FullLogo-cropped-resized.png" alt="" />
+        <p>&copy; 2023 NHLStarMansions. All rights reserved.</p>
+      </footer>
     </div>
-    <footer class="simulations_footer">
-      <img src="images/FullLogo-cropped-resized.png" alt="" />
-      <p>&copy; 2023 NHLStarMansions. All rights reserved.</p>
-    </footer>
     <script src="js/main.js"></script>
     <script>
       window.onload = function () {
