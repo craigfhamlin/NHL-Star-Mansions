@@ -9,7 +9,162 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Quicksand&family=Rancho&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="css/about.css">
+ <style>
+   
+  #canvas{
+      margin-left: 10%;
+  }
+  #image{
+    transform: scale(0.75);
+    border: 2px solid pink;
+  }
+  h3 {
+      font-family: "rancho";
+      color: white;
+      margin-bottom: 2.5%;
+      font-size: 3rem;
+      margin-left: 1%;
+  }
+  #about_button {
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 1%;
+  }
+  .about_header {
+      margin-top: 5%;
+      padding-left: 8rem;
+  }
+  .round_corners {
+      border-radius: 8px;
+      border: 8px solid green;
+  }
+  #about_first_row {
+      padding-bottom: 0;
+  }
+  #how_we_do {
+    text-align: right;
+    font-size: 4.25em;
+   margin-top: 0;
+   color: white;
+   margin-bottom: 11rem;
+    padding-left: 3rem;
+    background-color: green;
+    border-left: 5rem solid black;
+  }
+  #fudge {
+      grid-template-columns: 85fr 15fr;
+  }
+  #how_text {
+    margin-bottom: 11rem;
+   padding-left: 2rem;
+   padding-top: 1rem;
+   background-color: green;
+   border-radius: 0px 5px 5px 0px;
+  }
+  #core_values {
+      margin-top: 0;
+      color: white;
+      text-align: right;
+  }
+  #core_header {
+      margin-left: 10rem;
+      margin-bottom: 10rem;
+      padding-right: 2rem;
+      background-color:  hwb(53 39% 0%);
+      border-right: 3rem solid black;
+      border-radius: 5px 5px;
+     
+  }
+  #fudge_div {
+      grid-template-columns: 20fr 85fr;
+      margin-bottom: 5rem;
+  }
+  #core_text {
+    text-align: right;
+  }
+  .about_footer {     
+background-color:black;
+color: #fff;
+padding: 20px;
+text-align: center;
+font-size: 1.5rem;
+  }
+  .about_nav_brand {
+    white-space: nowrap;
+    transform: translateY(-10px);
+  }
+  @media screen and (max-width: 768px) {
+    #about_button { 
+      width: 100rem;
+      height:4rem;
+      background: black;
+      color: #fff;
+  }
+  .about_header {
+      margin-top: 0%;
+      padding-left: 0rem;
+      padding-right: 2rem;
+      margin-bottom: 0%;
+      width: 33rem;
+  }
+  .hero__tagline2 {
+    font-size: 1.1rem;
+    color: #b9c3cf;   
+  }
+  #canvas {
+      margin-top: 0%;
+   margin-left: -4rem;
+    
+ 
+  }
+  
+  #fudge {
+      grid-template-columns: 0;
+  }
+  #fudge_div {
+  grid-template-columns: 10fr 90fr;
+  width: 35rem;
+  margin-left: 1rem;  
+  height: 80%;
+  }
+  #how_we_do {
+    text-align: center;
+    font-size: 1.75em;
+   line-height: 5rem;
+    padding-top: 3rem;
+   color: white;
+   margin-bottom: none;
+    padding-left: 0.5rem;
+    background-color: green;
+    display: flex;
+    border-left: 3px solid black;
+  }
+  #how_text {
+    margin-bottom: none;
+   padding-left: none;
+   padding-top: none;
+   padding-bottom: 1rem;
+   background-color: green;
+   border-radius: 0px 5px 5px 0px;
+   width: 90%;
+  }
+  #core_values {
+      margin-top: 0;
+      color: white;
+      text-align: center;
+  }
+  #core_header {
+      margin-left: 5rem;
+      margin-top: -8rem;
+      padding-right: none;
+      background-color:  hwb(53 39% 0%);
+      border-radius: 5px 5px; 
+      width: 25rem;
+      border: 1px solid green;
+     
+  }
+  }
+ </style>
   </head>
   <body>
    <div class="round_corners">
