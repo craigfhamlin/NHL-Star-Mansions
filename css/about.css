@@ -2,7 +2,7 @@ body {
     border: 25px solid hwb(53 39% 0%);
   }
   #canvas{
-      margin-left: 20%;
+      margin-left: 10%;
   }
   #image{
     transform: scale(0.75);
