@@ -1,172 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odds</title>
-    <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Quicksand&family=Rancho&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/simulations.css" />
     <style>
-      #image {
-        transform: scale(0.75);
-        border: 2px solid pink;
-      }
-      h3 {
-        font-family: "rancho";
-        color: green;
-        margin-bottom: 2.5%;
-        font-size: 3rem;
-        margin-left: 1%;
-      }
-      #about_button {
-        border-radius: 5px;
-        cursor: pointer;
-        margin-right: 1%;
-        background-color: green;
-        color: black;
+      body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
       }
 
-      .about_footer {
-        background-color: black;
-        color: #fff;
-        padding: 20px;
+      header {
+        background-color: #1e90ff;
+        color: #ffffff;
+        padding: 10px;
         text-align: center;
-        font-size: 1.5rem;
       }
-      .particles {
-        height: 100%;
+      #main {
+        display: flex;
+        font-family: "rancho";
+        color: white;
+        margin-bottom: -3.5%;
+        font-size: 1.75rem;
+        margin-left: 1%;
+        text-decoration: none;
+      }
+
+      .small_container {
+        border: 2px solid pink;
+        width: 25rem;
+      }
+
+      .small {
+      }
+
+      h1 {
+        font-size: 36px;
         margin: 0;
-        overflow: hidden;
-        background-color: black;
+        display: flex;
+        margin-left: 15rem;
       }
-      .about_nav_brand {
-        white-space: nowrap;
-        transform: translateY(-10px);
+
+      main {
+        margin: 20px auto;
+        max-width: 800px;
       }
-      canvas {
-        display: block;
-      }
-      #canvas {
-        margin-left: 10%;
-      }
-      .simulations_footer {
-        background-color: black;
-        color: #fff;
+
+      #betting-odds {
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #cccccc;
+        margin: 20px;
         padding: 20px;
+      }
+
+      h2 {
+        font-size: 24px;
+        margin: 0 0 20px 0;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+
+      th {
+        background-color: #1e90ff;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 10px;
         text-align: center;
-        font-size: 1.5rem;
+      }
+
+      td {
+        border: 1px solid #cccccc;
+        padding: 10px;
+        text-align: center;
+      }
+      #nav_colors {
+        background-color: #1e90ff;
+      }
+      #h3_color {
+        color: white;
+      }
+      #odds_button {
+        border-radius: 10px;
+        cursor: pointer;
+        margin-right: 1%;
+        background-color: #1e90ff;
+        color: white;
+        text-decoration: none;
+        border: 1px solid white;
+        padding: 3px;
       }
     </style>
   </head>
   <body>
-    <div class="round_corners">
-      <nav class="nav collapsible">
-        <a href="index.html" class="about_nav_brand">
-          <h3>NHL Star Mansions</h3>
-        </a>
-        <svg class="icon icon--white nav__toggler">
-          <use xlink:href="images/sprite.svg#hockey-puck"></use>
-        </svg>
-        <ul class="list nav__list collapsible__content">
-          <li class="about_nav_item"><a href="#">Odds</a></li>
-          <li class="about_nav_item">
-            <a href="simulations.html">Simulations</a>
-          </li>
-          <li class="about_nav_item"><a href="who-wins.html">Who is #1?</a></li>
-          <li class="about_nav_item">
-            <a href="ovi-hunt.html">Ovi Hunt 64</a>
-          </li>
-        </ul>
-        <button id="about_button">bet now</button>
-      </nav>
-      <div class="particles">
-        <canvas id="canvas"></canvas>
-      </div>
-      <footer class="about_footer">
-        <img src="images/FullLogo-cropped-resized.png" alt="" />
-        <p>&copy; 2023 NHLStarMansions. All rights reserved.</p>
-      </footer>
-    </div>
-    <script src="js/main.js"></script>
+    <nav class="nav collapsible" id="nav_colors">
+      <a href="index.html" class="about_nav_brand">
+        <h3 id="h3_color">NHL Star Mansions</h3>
+      </a>
+      <svg class="icon icon--white nav__toggler">
+        <use xlink:href="images/sprite.svg#hockey-puck"></use>
+      </svg>
+      <ul class="list nav__list collapsible__content">
+        <li class="about_nav_item"><a href="about.html">About</a></li>
+        <li class="about_nav_item">
+          <a href="simulations.html">Simulations</a>
+        </li>
+        <li class="about_nav_item"><a href="who-wins.html">Who is #1?</a></li>
+        <li class="about_nav_item">
+          <a href="ovi-hunt.html">Ovi Hunt 64</a>
+        </li>
+      </ul>
+      <button id="odds_button">bet now</button>
+    </nav>
+    <main>
+      <section id="betting-odds">
+        <h2>Current Odds</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Team</th>
+              <th>Moneyline</th>
+              <th>Puck Line</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>New York Rangers</td>
+              <td>+135</td>
+              <td>+1.5 (-175)</td>
+              <td>6.5 (-110)</td>
+            </tr>
+            <tr>
+              <td>Toronto Maple Leafs</td>
+              <td>-155</td>
+              <td>-1.5 (+155)</td>
+              <td>6.5 (-110)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
     <script>
-      window.onload = function () {
-        var canvas = document.getElementById("canvas");
-        var ctx = canvas.getContext("2d");
+      const oddsTable = document.querySelector("#betting-odds table tbody");
 
-        // Set canvas width and height
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        // Create an array of particles
-        var particles = [];
-        for (var i = 0; i < 50; i++) {
-          particles.push(new Particle());
-        }
-
-        // Define Particle class
-        function Particle() {
-          this.x = Math.random() * canvas.width;
-          this.y = Math.random() * canvas.height;
-          this.vx = Math.random() * 2 - 1;
-          this.vy = Math.random() * 2 - 1;
-          this.radius = Math.random() * 5 + 7;
-        }
-
-        // Update particles and draw Northern Lights
-        function draw() {
-          // Clear canvas
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-          // Update particles
-          for (var i = 0; i < particles.length; i++) {
-            var p = particles[i];
-
-            // Update position
-            p.x += p.vx;
-            p.y += p.vy;
-
-            // Wrap around edges
-            if (p.x < -50) p.x = canvas.width + 50;
-            if (p.y < -50) p.y = canvas.height + 50;
-            if (p.x > canvas.width + 50) p.x = -50;
-            if (p.y > canvas.height + 50) p.y = -50;
-
-            // Draw particle
-            ctx.beginPath();
-            var gradient = ctx.createRadialGradient(
-              p.x,
-              p.y,
-              0,
-              p.x,
-              p.y,
-              p.radius
-            );
-            gradient.addColorStop(0, "rgba(0, 255, 255, 0.5)"); // blue
-            gradient.addColorStop(0.5, "rgba(0, 128, 0, 0.3)"); // green
-            gradient.addColorStop(1, "rgba(128, 0, 128, 0)"); // purple
-            ctx.fillStyle = gradient;
-            ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI);
-            ctx.fill();
-            ctx.fillStyle = "yellow";
-            ctx.font = p.radius + "px Arial";
-            ctx.textAlign = "center";
-            ctx.textBaseline = "middle";
-            ctx.fillText("$", p.x, p.y);
-          }
-
-          // Schedule next frame
-          requestAnimationFrame(draw);
-        }
-
-        // Start animation
-        draw();
-      };
+      fetch("https://api.example.com/hockey-odds")
+        .then((response) => response.json())
+        .then((data) => {
+          // Loop through the data and add rows to the table
+          data.forEach((game) => {
+            const row1 = `
+				<tr>
+					<td>${game.team1}</td>
+					<td>${game.moneyline1}</td>
+					<td>${game.puckline1}</td>
+					<td>${game.total}</td>
+				</tr>`;
+            const row2 = `
+				<tr>
+					<td>${game.team2}</td>
+					<td>${game.moneyline2}</td>
+					<td>${game.puckline2}</td>
+					<td>${game.total}</td>
+				</tr>`;
+            oddsTable.insertAdjacentHTML("beforeend", row1 + row2);
+          });
+        })
+        .catch((error) => console.error(error));
     </script>
   </body>
 </html>
