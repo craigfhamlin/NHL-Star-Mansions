@@ -19,6 +19,24 @@
         padding: 0;
       }
 
+      #floyd {
+        background-color: #1e90ff;
+        color: #ffffff;
+      }
+      #lil_tim {
+        border-radius: 10px;
+        cursor: pointer;
+        margin-right: 1%;
+        background-color: #1e90ff;
+        color: white;
+        text-decoration: none;
+        border: 1px solid white;
+        padding: 3px;
+      }
+      #dr_J {
+        color: white;
+      }
+
       header {
         background-color: #1e90ff;
         color: #ffffff;
@@ -91,6 +109,8 @@
       }
       #h3_color {
         color: white;
+        font-size: 3.5rem;
+        padding-bottom: 1rem;
       }
       #odds_button {
         border-radius: 10px;
@@ -104,50 +124,27 @@
       }
       .about_nav_item {
         font-size: 2.15rem;
-      }
-      @media screen and (max-width: 768px) {
-        #nav_colors {
-          height: 15rem;
-          font-size: 1.85rem;
-        }
-        .about_nav_item {
-          padding: 0.5rem 2rem;
-          font-size: 1.7rem;
-          padding: 0.5rem 1rem;
-        }
-        .nav__list {
-          width: auto;
-          display: flex;
-          /* make the list always visible */
-          max-height: 100%;
-          font-size: 1.5rem;
-          opacity: 1;
-        }
-        #h3_color {
-          color: purple;
-          padding-left: 11rem;
-          font-size: 4rem;
-        }
+        filter: brightness(150%);
       }
     </style>
   </head>
   <body>
-    <nav class="nav" id="nav_colors">
+    <nav class="nav collapsible" id="floyd">
       <a href="index.html" class="about_nav_brand">
-        <h3 id="h3_color">NHL Star Mansions</h3>
+        <h3 id="dr_J">NHL Star Mansions</h3>
       </a>
-
-      <ul class="list nav__list">
-        <li class="about_nav_item"><a href="about.html">About</a></li>
+      <svg class="icon icon--white nav__toggler">
+        <use xlink:href="images/sprite.svg#hockey-puck"></use>
+      </svg>
+      <ul class="list nav__list collapsible__content">
+        <li class="about_nav_item"><a href="odds.html">Odds</a></li>
         <li class="about_nav_item">
           <a href="simulations.html">Simulations</a>
         </li>
         <li class="about_nav_item"><a href="who-wins.html">Who is #1?</a></li>
-        <li class="about_nav_item">
-          <a href="ovi-hunt.html">Ovi Hunt 64</a>
-        </li>
+        <li class="about_nav_item"><a href="ovi-hunt.html">Ovi Hunt 64</a></li>
       </ul>
-      <button id="odds_button">bet now</button>
+      <button id="lil_tim">bet now</button>
     </nav>
     <main>
       <section id="betting-odds">
@@ -178,6 +175,7 @@
         </table>
       </section>
     </main>
+    <script src="js/main.js"></script>
     <script>
       const oddsTable = document.querySelector("#betting-odds table tbody");
 
