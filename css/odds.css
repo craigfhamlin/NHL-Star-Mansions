@@ -1,0 +1,111 @@
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  #odds-nav {
+    background-color: #1e90ff;
+    color: #ffffff;
+  }
+  #odds-button {
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 1%;
+    background-color: #1e90ff;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 3px;
+    margin-bottom: 0.5rem;
+  }
+  #h3-odds {
+    color: white;
+    margin-bottom: 1.25rem;
+  }
+
+  header {
+    background-color: #1e90ff;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+  }
+  #main {
+    display: flex;
+    font-family: "rancho";
+    color: white;
+    margin-bottom: -3.5%;
+    font-size: 1.75rem;
+    margin-left: 1%;
+    text-decoration: none;
+  }
+
+  .small_container {
+    border: 2px solid pink;
+    width: 25rem;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin: 0;
+    display: flex;
+    margin-left: 15rem;
+  }
+
+  main {
+    margin: 20px auto;
+    max-width: 800px;
+  }
+
+  #betting-odds {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #cccccc;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+
+  th {
+    background-color: #1e90ff;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+  }
+
+  td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    text-align: center;
+  }
+  .about_nav_item {
+    font-size: 2.15rem;
+    filter: brightness(150%);
+  }
+  @media screen and (max-width: 768px) {
+    #h3-odds {
+      margin-bottom: 0.75rem;
+      font-size: 3.5rem;
+      margin-left: 1.85rem;
+    }
+    #odds-button {
+      margin-top: 0.75rem;
+      margin-left: 1.85rem;
+    }
+    .icon {
+      margin-right: 1rem;
+    }
+  }

@@ -10,142 +10,27 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/simulations.css" />
-    <style>
-      body {
-        background-color: #f5f5f5;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        margin: 0;
-        padding: 0;
-      }
-
-      #floyd {
-        background-color: #1e90ff;
-        color: #ffffff;
-      }
-      #lil_tim {
-        border-radius: 10px;
-        cursor: pointer;
-        margin-right: 1%;
-        background-color: #1e90ff;
-        color: white;
-        text-decoration: none;
-        border: 1px solid white;
-        padding: 3px;
-      }
-      #dr_J {
-        color: white;
-      }
-
-      header {
-        background-color: #1e90ff;
-        color: #ffffff;
-        padding: 10px;
-        text-align: center;
-      }
-      #main {
-        display: flex;
-        font-family: "rancho";
-        color: white;
-        margin-bottom: -3.5%;
-        font-size: 1.75rem;
-        margin-left: 1%;
-        text-decoration: none;
-      }
-
-      .small_container {
-        border: 2px solid pink;
-        width: 25rem;
-      }
-
-      h1 {
-        font-size: 36px;
-        margin: 0;
-        display: flex;
-        margin-left: 15rem;
-      }
-
-      main {
-        margin: 20px auto;
-        max-width: 800px;
-      }
-
-      #betting-odds {
-        background-color: #ffffff;
-        border: 1px solid #cccccc;
-        border-radius: 5px;
-        box-shadow: 0px 0px 5px #cccccc;
-        margin: 20px;
-        padding: 20px;
-      }
-
-      h2 {
-        font-size: 24px;
-        margin: 0 0 20px 0;
-      }
-
-      table {
-        border-collapse: collapse;
-        margin: 0 auto;
-      }
-
-      th {
-        background-color: #1e90ff;
-        color: #ffffff;
-        font-weight: bold;
-        padding: 10px;
-        text-align: center;
-      }
-
-      td {
-        border: 1px solid #cccccc;
-        padding: 10px;
-        text-align: center;
-      }
-      #nav_colors {
-        background-color: #1e90ff;
-        height: 10rem;
-        font-size: 2.25rem;
-      }
-      #h3_color {
-        color: white;
-        font-size: 3.5rem;
-        padding-bottom: 1rem;
-      }
-      #odds_button {
-        border-radius: 10px;
-        cursor: pointer;
-        margin-right: 1%;
-        background-color: #1e90ff;
-        color: white;
-        text-decoration: none;
-        border: 1px solid white;
-        padding: 3px;
-      }
-      .about_nav_item {
-        font-size: 2.15rem;
-        filter: brightness(150%);
-      }
-    </style>
+    <link rel="stylesheet" href="css/odds.css" />
   </head>
   <body>
-    <nav class="nav collapsible" id="floyd">
+    <nav class="nav collapsible" id="odds-nav">
       <a href="index.html" class="about_nav_brand">
-        <h3 id="dr_J">NHL Star Mansions</h3>
+        <h3 id="h3-odds">NHL Star Mansions</h3>
       </a>
       <svg class="icon icon--white nav__toggler">
         <use xlink:href="images/sprite.svg#hockey-puck"></use>
       </svg>
       <ul class="list nav__list collapsible__content">
-        <li class="about_nav_item"><a href="odds.html">Odds</a></li>
+        <li class="about_nav_item"><a href="about.html">About</a></li>
         <li class="about_nav_item">
           <a href="simulations.html">Simulations</a>
         </li>
         <li class="about_nav_item"><a href="who-wins.html">Who is #1?</a></li>
         <li class="about_nav_item"><a href="ovi-hunt.html">Ovi Hunt 64</a></li>
       </ul>
-      <button id="lil_tim">bet now</button>
+      <button id="odds-button">bet now</button>
     </nav>
+
     <main>
       <section id="betting-odds">
         <h2>Current Odds</h2>
@@ -176,32 +61,5 @@
       </section>
     </main>
     <script src="js/main.js"></script>
-    <script>
-      const oddsTable = document.querySelector("#betting-odds table tbody");
-
-      fetch("https://api.example.com/hockey-odds")
-        .then((response) => response.json())
-        .then((data) => {
-          // Loop through the data and add rows to the table
-          data.forEach((game) => {
-            const row1 = `
-				<tr>
-					<td>${game.team1}</td>
-					<td>${game.moneyline1}</td>
-					<td>${game.puckline1}</td>
-					<td>${game.total}</td>
-				</tr>`;
-            const row2 = `
-				<tr>
-					<td>${game.team2}</td>
-					<td>${game.moneyline2}</td>
-					<td>${game.puckline2}</td>
-					<td>${game.total}</td>
-				</tr>`;
-            oddsTable.insertAdjacentHTML("beforeend", row1 + row2);
-          });
-        })
-        .catch((error) => console.error(error));
-    </script>
   </body>
 </html>

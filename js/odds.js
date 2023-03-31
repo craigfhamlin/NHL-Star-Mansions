@@ -1,3 +1,5 @@
+// INSERT THIS IS DOM WHEN YOU ARE READY
+
 /*This code fetches data from the https://api.example.com/hockey-odds API using 
 the Fetch API. The response is in JSON format, so we use 
 the response.json() method to parse it into a JavaScript object.

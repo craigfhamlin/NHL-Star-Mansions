@@ -1,11 +1,11 @@
 /* Testimonials */
 .testimonial {
-    padding: 3rem;
+    padding: 2.5rem;
   }
   
   .testimonial .quote {
     margin: 2rem 0;
-    font-size: 110%;
+    font-size: 90%;
   }
   
   .testimonial__image {
@@ -17,7 +17,7 @@
   .testimonial__image > .icon-container {
     position: absolute;
     top: 3rem;
-    right: -32px;
+    right: -30px;
   }
 
   .bill {
