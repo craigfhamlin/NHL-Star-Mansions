@@ -23,6 +23,8 @@
   .bill {
     display: inline-flex;
   }
+
+
   
   @media screen and (min-width: 768px) {
     .testimonial .quote,
@@ -35,10 +37,20 @@
     }
   
     .testimonial .quote {
-      margin: 5rem 0 0 6rem;
-      font-size: 120%;
+      margin: 1rem 0rem 0rem 1.5rem;
+      font-size: 70%;
+      padding-top: 7rem;
       line-height: 1.5;
     }
+  }
+
+  @media screen and (min-width: 1000px) {
+   .testimonial .quote {
+     font-size: 120%;
+    line-height: 1.5;
+    margin: 5rem 0 0 6rem;
+    padding-top: 0rem;
+   }
   }
   
   /* Callouts */
@@ -86,3 +98,5 @@
   .tim {
     color: aqua;
   }
+
+ 
