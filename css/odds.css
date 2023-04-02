@@ -9,7 +9,7 @@ body {
   #odds-nav {
     background-color: #1e90ff;
     color: #ffffff;
-    text-shadow: 4px 4px 5px #36454F;
+    text-shadow: 3px 3px 5px black;
   }
   #odds-button {
       height: 4.5rem;
@@ -29,9 +29,11 @@ body {
   }
   #h3-odds {
     color: white;
-    margin-bottom: 2.2rem;
+    margin-bottom: 4.5rem;
     text-shadow: 3px 3px 3px black;
     font-size: 4rem;
+    font-family: "rancho";
+    margin-left: 1.25rem;
   }
 
 
@@ -105,6 +107,11 @@ body {
     filter: brightness(150%);
   }
 
+  .about_nav_item > a:hover {
+    color: royalblue;
+  }
+
+
   @media screen and (max-width: 965px) {
     #odds-button {
         margin-bottom: 2rem;
@@ -118,16 +125,19 @@ body {
           border: solid 3px gold;
          height: 100rem;
       }
+      #unorderedList {
+        margin-top: -2rem;
+      }
       svg {
         margin-top: 0.85rem;
       }
     #h3-odds {
-      margin-bottom: 0.70rem;
+      margin-bottom: 2.5rem;
       font-size: 3.5rem;
       margin-left: 1.85rem;
     }
     #odds-button {
-      margin-top: 0.45rem;
+      margin-top: 0.75rem;
       margin-left: 2rem;
       height: 3.8rem;
       width: 8rem;
@@ -136,5 +146,8 @@ body {
     }
     .icon {
       margin-right: 1rem;
+    }
+    .about_nav_item {
+      border-bottom: 1px dotted #36454F;
     }
   }
