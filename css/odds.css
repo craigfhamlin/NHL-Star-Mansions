@@ -9,8 +9,12 @@ body {
   #odds-nav {
     background-color: #1e90ff;
     color: #ffffff;
+    text-shadow: 4px 4px 5px #36454F;
   }
   #odds-button {
+      height: 4.5rem;
+      width: 8rem;
+      font-size: 1.90rem;
     border-radius: 10px;
     cursor: pointer;
     margin-right: 1%;
@@ -19,12 +23,17 @@ body {
     text-decoration: none;
     border: 1px solid white;
     padding: 3px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+    box-shadow: 3px 3px 5px black
+   
   }
   #h3-odds {
     color: white;
-    margin-bottom: 1.25rem;
+    margin-bottom: 2.2rem;
+    text-shadow: 3px 3px 3px black;
+    font-size: 4rem;
   }
+
 
   header {
     background-color: #1e90ff;
@@ -92,18 +101,38 @@ body {
     text-align: center;
   }
   .about_nav_item {
-    font-size: 2.15rem;
+    font-size: 2.5rem;
     filter: brightness(150%);
   }
+
+  @media screen and (max-width: 965px) {
+    #odds-button {
+        margin-bottom: 2rem;
+    }
+  }
+
+
+
   @media screen and (max-width: 768px) {
+      body {
+          border: solid 3px gold;
+         height: 100rem;
+      }
+      svg {
+        margin-top: 0.85rem;
+      }
     #h3-odds {
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.70rem;
       font-size: 3.5rem;
       margin-left: 1.85rem;
     }
     #odds-button {
-      margin-top: 0.75rem;
-      margin-left: 1.85rem;
+      margin-top: 0.45rem;
+      margin-left: 2rem;
+      height: 3.8rem;
+      width: 8rem;
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
     }
     .icon {
       margin-right: 1rem;
