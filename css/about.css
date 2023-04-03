@@ -73,11 +73,11 @@ body {
     text-align: right;
   }
   .about_footer {     
-background-color:black;
-color: #fff;
-padding: 20px;
-text-align: center;
-font-size: 1.5rem;
+  background-color:black;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
   }
   .about_nav_brand {
     white-space: nowrap;
@@ -104,10 +104,12 @@ font-size: 1.5rem;
   #canvas {
       margin-top: 0%;
    margin-left: -4rem;
-    
- 
   }
-  
+  .about_footer {     
+    padding: 18px;
+    text-align: center;
+    font-size: 1.2rem;
+      }
   #fudge {
       grid-template-columns: 0;
   }

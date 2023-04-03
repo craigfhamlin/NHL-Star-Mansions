@@ -1,3 +1,4 @@
+
 #image {
     transform: scale(0.75);
     border: 2px solid pink;
@@ -48,6 +49,9 @@
     font-size: 1.5rem;
   }
   @media screen and (max-width: 768px) {
+    body {
+      height: 70vh;
+    }
     #unorderedList {
       display: flex;
       list-style: none;
@@ -56,7 +60,7 @@
       padding-bottom: 0.5rem;
     }
     .about_nav_item {
-      font-size: 1.50rem;
+      font-size: 1.35rem;
       visibility: hidden;
     }
     button {
@@ -71,7 +75,14 @@
       opacity: 0;
       animation: fade-in 1s ease-in-out forwards;
     }
-
+    .about_footer {
+      font-size: 1rem;
+      margin-bottom: 0rem;
+    }
+    #logo {
+      height: 5rem;
+      width: 14rem;
+    }
     svg {
       margin-right: 1.25rem;
     }
