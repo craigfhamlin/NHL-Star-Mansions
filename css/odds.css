@@ -149,5 +149,6 @@ body {
     }
     .about_nav_item {
       border-bottom: 1px dotted #36454F;
+      font-size: 1.75rem;
     }
   }
