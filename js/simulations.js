@@ -1,4 +1,4 @@
-var aboutButton = document.getElementById("about_button");
+var aboutButton = document.getElementById("sim_button");
 var navList1 = document.getElementById("item1");
 var navList2 = document.getElementById("item2");
 var navList3 = document.getElementById("item3");
@@ -15,9 +15,10 @@ const collapsibles = document.querySelectorAll(".collapsible");
 collapsibles.forEach((item) =>
   item.addEventListener("click", function () {
     aboutButton.classList.toggle("sim_button_expand");
-    navArray.forEach(function (navItem) {
-      navItem.classList.toggle("nav_item_expand");
-    });
+    navArray.forEach((navItem) => navItem.classList.toggle("nav_item_expand"));
+    // navArray.forEach(function (navItem) {
+    //     navItem.classList.toggle("nav_item_expand");
+    //   });
   })
 );
 

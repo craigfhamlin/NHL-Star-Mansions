@@ -1,4 +1,4 @@
-// INSERT THIS IS DOM WHEN YOU ARE READY
+// INSERT THIS IN DOM WHEN YOU ARE READY
 
 /*This code fetches data from the https://api.example.com/hockey-odds API using 
 the Fetch API. The response is in JSON format, so we use 

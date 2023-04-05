@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulator</title>
+    <style>
+      #tv,
+      #tv3 {
+        left: 15%;
+        position: relative;
+        width: 200px;
+        height: 150px;
+        margin: 20px 0;
+        background: red;
+        border-radius: 50% / 10%;
+        text-align: center;
+        text-indent: 0.1em;
+      }
+
+      #tv:before,
+      #tv3:before {
+        content: "";
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        right: -5%;
+        left: -5%;
+        background: inherit;
+        border-radius: 5% / 50%;
+      }
+
+      #text,
+      #text2,
+      #text3 {
+        position: absolute;
+        color: yellow;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #tv2 {
+        left: 75%;
+        position: relative;
+        width: 200px;
+        height: 150px;
+        margin: 20px 0;
+        background: red;
+        border-radius: 50% / 10%;
+        text-align: center;
+        text-indent: 0.1em;
+        opacity: 0;
+      }
+
+      #tv2:before {
+        content: "";
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        right: -5%;
+        left: -5%;
+        background: inherit;
+        border-radius: 5% / 50%;
+      }
+
+      #tv3 {
+        left: 15%;
+        position: relative;
+        width: 200px;
+        height: 150px;
+        margin: 20px 0;
+        background: red;
+        border-radius: 50% / 10%;
+        text-align: center;
+        text-indent: 0.1em;
+        opacity: 0;
+      }
+
+      #tv3:before {
+        content: "";
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        right: -5%;
+        left: -5%;
+        background: inherit;
+        border-radius: 5% / 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="player-simulator">
+      <h6>
+        The next level of sports simulators has arrived with the NHL Star
+        Mansions player performance predictor model. Goals, Saves, Hits, Penalty
+        minutes, and more, all are analyzed with state of the art technology, to
+        create a most beneficial evaluation system for player contribution to
+        our great nation. Don’t delay, make an inquiry today!
+      </h6>
+    </div>
+    <div class="propaganda-simulator">
+      <h6>
+        The NHL Star Mansions simulator isn't just for seasoned sports fans -
+        it's perfect for those just starting out on their predictive analysis
+        journey as well. With its intuitive interface and easy-to-use features,
+        it's the ideal tool to help you take your predictive strategy to the
+        next level. Sign up today and see for yourself how the NHL Star Mansions
+        simulator can help us achieve a world of justice and civility for all!
+        Under the guidance of a helpful team of friendly overseers, our NHL Star
+        Mansions game simulator stands as a shining example of the triumph of
+        collectivism over individualism. Through the tireless work of our expert
+        analysts, we harness the power of technology to deliver unrivalled
+        accuracy and precision to our users. Embrace the spirit of socialism and
+        join our community of bettors today - together, we can achieve
+        unparalleled success and prosperity!
+      </h6>
+    </div>
+    <div id="tv">
+      <div id="text"></div>
+    </div>
+    <div id="tv2">
+      <div id="text2"></div>
+    </div>
+    <div id="tv3">
+      <div id="text3"></div>
+    </div>
+    <script>
+      const tv = document.getElementById("tv");
+      const text = document.getElementById("text");
+      let delay = 0;
+      function setTV(fadeInTime, fadeOutTime) {
+        setTimeout(() => {
+          tv.style.opacity = 0;
+          setTimeout(() => {
+            tv.style.opacity = 0.8;
+          }, fadeInTime);
+        }, delay);
+        delay += fadeInTime + fadeOutTime;
+      }
+      function setTV2(fadeInTime, fadeOutTime) {
+        setTimeout(() => {
+          tv2.style.opacity = 0;
+          setTimeout(() => {
+            tv2.style.opacity = 0.8;
+          }, fadeInTime);
+        }, delay);
+        delay += fadeInTime + fadeOutTime;
+      }
+
+      function setTV3(fadeInTime, fadeOutTime) {
+        setTimeout(() => {
+          tv3.style.opacity = 0;
+          setTimeout(() => {
+            tv3.style.opacity = 0.8;
+          }, fadeInTime);
+        }, delay);
+        delay += fadeInTime + fadeOutTime;
+      }
+
+      function setText(textContent, fadeInTime, fadeOutTime) {
+        setTimeout(() => {
+          text.style.opacity = 0;
+          setTimeout(() => {
+            text.textContent = textContent;
+            text.style.opacity = 1;
+          }, fadeInTime);
+        }, delay);
+        delay += fadeInTime + fadeOutTime;
+      }
+
+      function setText2(textContent, fadeInTime, fadeOutTime) {
+        setTimeout(() => {
+          text2.style.opacity = 0;
+          setTimeout(() => {
+            text2.textContent = textContent;
+            text2.style.opacity = 1;
+          }, fadeInTime);
+        }, delay);
+        delay += fadeInTime + fadeOutTime;
+      }
+
+      function setText3(textContent, fadeInTime, fadeOutTime) {
+        setTimeout(() => {
+          text3.style.opacity = 0;
+          setTimeout(() => {
+            text3.textContent = textContent;
+            text3.style.opacity = 1;
+          }, fadeInTime);
+        }, delay);
+        delay += fadeInTime + fadeOutTime;
+      }
+
+      function clearScreen(fadeInTime, fadeOutTime) {
+        setTimeout(() => {
+          tv.style.transition = `opacity ${fadeInTime / 1000}s ease-in-out`;
+          tv.style.opacity = 0.8;
+          text.style.transition = `opacity ${fadeInTime / 1000}s ease-in-out`;
+          text.style.opacity = 0.1;
+          tv2.style.transition = `opacity ${fadeInTime / 1000}s ease-in-out`;
+          tv2.style.opacity = 0.8;
+          text2.style.transition = `opacity ${fadeInTime / 1000}s ease-in-out`;
+          text2.style.opacity = 0.1;
+          tv3.style.transition = `opacity ${fadeInTime / 1000}s ease-in-out`;
+          tv3.style.opacity = 0.8;
+          text3.style.transition = `opacity ${fadeInTime / 1000}s ease-in-out`;
+          text3.style.opacity = 0.1;
+
+          setTimeout(() => {
+            tv.style.transition = `opacity ${fadeOutTime / 1000}s ease-in-out`;
+            tv.style.opacity = 0;
+            text.style.transition = `opacity ${
+              fadeOutTime / 1000
+            }s ease-in-out`;
+            text.style.opacity = 0;
+            tv2.style.transition = `opacity ${fadeOutTime / 1000}s ease-in-out`;
+            tv2.style.opacity = 0;
+            text2.style.transition = `opacity ${
+              fadeOutTime / 1000
+            }s ease-in-out`;
+            text2.style.opacity = 0;
+            tv3.style.transition = `opacity ${fadeOutTime / 1000}s ease-in-out`;
+            tv3.style.opacity = 0;
+            text3.style.transition = `opacity ${
+              fadeOutTime / 1000
+            }s ease-in-out`;
+            text3.style.opacity = 0;
+          }, fadeInTime);
+        }, delay);
+        delay += fadeInTime + fadeOutTime;
+      }
+
+      setTV(50, 1000);
+
+      setText(
+        "Behold the revolutionary NHL Star Mansions game simulator!",
+        50,
+        1500
+      );
+      setText(
+        "This powerful tool is made possible by the cutting-edge technology",
+        500,
+        1500
+      );
+      setText("of advanced algorithms and machine learning,", 500, 1500);
+      setText(
+        "delivering unmatched accuracy in predicting the outcomes of games.",
+        500,
+        1500
+      );
+      setTV2(50, 1000);
+      setText2("With each passing game", 500, 1300);
+      setText2(
+        "the simulator's predictions become more refined and precise,",
+        500,
+        1500
+      );
+      setText2(
+        "all thanks to the tireless efforts of our expert analysts!",
+        500,
+        1500
+      );
+      setTV3(50, 1000);
+
+      setText3(
+        "This powerful and considered analytic evaluator is a FREE",
+        50,
+        1500
+      );
+      setText3("TOOL", 500, 1500);
+      setText3(
+        "in helping users consider their own predictive strategies",
+        500,
+        1500
+      );
+      clearScreen(500, 1500);
+    </script>
+  </body>
+</html>

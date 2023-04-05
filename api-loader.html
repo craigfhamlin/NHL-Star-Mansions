@@ -1,0 +1,60 @@
+<!-- Here's some example code that demonstrates how to use the NHL Stats API to retrieve the data and create a table:-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hockey Game Listing</title>
+    <style>
+      #game-listing td {
+        text-align: center;
+        padding: 0 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TOnight Games</h1>
+    <table id="game-listing">
+      <thead>
+        <tr>
+          <th>Home Team</th>
+          <th>Visiting Team</th>
+          <th>Game Start Time</th>
+          <th>Home Record</th>
+          <th>Visiting Record</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      // Make a request to the NHL Stats API to retrieve the data for all the games on the current date
+      const api_key = "YOUR_API_KEY_HERE";
+      const endpoint = "https://statsapi.web.nhl.com/api/v1/schedule";
+      const date = new Date().toISOString().split("T")[0];
+      const params = `?date=${date}&expand=schedule.linescore&site=en_nhl`;
+
+      fetch(`${endpoint}${params}&?api_key=${api_key}`)
+        .then((response) => response.json())
+        .then((data) => {
+          // Iterate through each game and extract the relevant information from the response data
+          const games = data.dates[0].games;
+          const tableBody = document.querySelector("#game-listing tbody");
+          for (let game of games) {
+            const homeTeam = game.teams.home.team.name;
+            const visitingTeam = game.teams.away.team.name;
+            const startTime = new Date(game.gameDate).toLocaleTimeString();
+            const homeRecord = `${game.teams.home.leagueRecord.wins}-${game.teams.home.leagueRecord.losses}-${game.teams.home.leagueRecord.ot}`;
+            const visitingRecord = `${game.teams.away.leagueRecord.wins}-${game.teams.away.leagueRecord.losses}-${game.teams.away.leagueRecord.ot}`;
+
+            // Populate the table with the data for each game
+            const row = tableBody.insertRow();
+            row.insertCell().textContent = homeTeam;
+            row.insertCell().textContent = visitingTeam;
+            row.insertCell().textContent = startTime;
+            row.insertCell().textContent = homeRecord;
+            row.insertCell().textContent = visitingRecord;
+          }
+        })
+        .catch((error) => console.log(error));
+    </script>
+  </body>
+</html>

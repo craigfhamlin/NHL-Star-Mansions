@@ -10,12 +10,13 @@
     font-size: 3rem;
     margin-left: 1.25rem;
   }
-  #about_button {
-    border-radius: 5px;
+  #sim_button {
+    border-radius: 10px;
     cursor: pointer;
     margin-right: 1%;
     background-color: green;
     color: black;
+    border: 1px solid green;
   }
 
   .about_footer {
@@ -76,30 +77,30 @@
       animation: fade-in 1s ease-in-out forwards;
     }
     .about_footer {
-      font-size: 1rem;
+      font-size: 0.7rem;
       margin-bottom: 0rem;
       grid-template-columns: 50fr 50fr;
     }
     #footer-text {
       position: absolute;
-      margin-left: 22rem;
-      bottom: 1.66rem;
+      margin-left: 26rem;
+      bottom: 1.55rem;
       color: grey;
       font-weight: bold;
     }
     #logo {
       filter: brightness(150%);
       position: absolute;
-      height: 5rem;
-      width: 14rem;
+      height: 3.75rem;
+      width: 11rem;
       display: flex;
       bottom: 1rem;
+      margin-left: 2rem;
      
     }
     svg {
       margin-right: 1.25rem;
     }
-
     .sim_button_expand {
       position: fixed;
       top: 10rem;
