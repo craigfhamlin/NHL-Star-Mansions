@@ -77,13 +77,13 @@
       animation: fade-in 1s ease-in-out forwards;
     }
     .about_footer {
-      font-size: 0.7rem;
+      font-size: 0.6rem;
       margin-bottom: 0rem;
       grid-template-columns: 50fr 50fr;
     }
     #footer-text {
       position: absolute;
-      margin-left: 26rem;
+      margin-left: 24rem;
       bottom: 1.55rem;
       color: grey;
       font-weight: bold;

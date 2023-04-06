@@ -14,9 +14,27 @@
     />
     <link rel="stylesheet" href="css/simulations.css" />
     <style>
+      .bigWrap {
+        font-size: 1.5rem;
+        line-height: 1;
+        position: absolute;
+        top: 12.5%;
+        left: 20%;
+        z-index: 1;
+        border: 2px solid green;
+      }
+      .bigButton {
+        font-size: 1.5rem;
+        line-height: 1;
+        position: absolute;
+        top: 25%;
+        left: 75%;
+        z-index: 1;
+        color: pink;
+        border: 2px solid green;
+      }
       #tv,
       #tv3 {
-        left: 15%;
         position: relative;
         width: 200px;
         height: 150px;
@@ -49,7 +67,7 @@
         transform: translate(-50%, -50%);
       }
       #tv2 {
-        left: 75%;
+        left: 72%;
         position: relative;
         width: 200px;
         height: 150px;
@@ -95,18 +113,26 @@
         background: inherit;
         border-radius: 5% / 50%;
       }
+
+      .particles {
+        position: relative;
+        width: 100vw;
+      }
     </style>
   </head>
   <body>
-    <div id="tv">
-      <div id="text"></div>
+    <div class="bigWrap">
+      <div id="tv">
+        <div id="text"></div>
+      </div>
+      <div id="tv2">
+        <div id="text2"></div>
+      </div>
+      <div id="tv3">
+        <div id="text3"></div>
+      </div>
     </div>
-    <div id="tv2">
-      <div id="text2"></div>
-    </div>
-    <div id="tv3">
-      <div id="text3"></div>
-    </div>
+    <button class="bigButton">Push Me</button>
     <nav class="nav collapsible">
       <a href="index.html" class="about_nav_brand">
         <h3>NHL Star Mansions</h3>
@@ -278,15 +304,15 @@
       setText3(
         "This powerful and considered analytic evaluator is a FREE",
         50,
-        1500
+        1600
       );
-      setText3("TOOL", 500, 1500);
+      setText3("tool", 500, 1500);
       setText3(
         "in helping users consider their own predictive strategies",
         500,
-        1500
+        1600
       );
-      clearScreen(50, 1500);
+      clearScreen(500, 1500);
     </script>
   </body>
 </html>
